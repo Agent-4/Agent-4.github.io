@@ -1,0 +1,38 @@
+#gallery-wrapper {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin: 0px auto;
+}
+img.thumb {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.white-panel {
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  padding: 6px;
+}
+.white-panel h1 {
+  font-size: 0.5em;
+  color: #a92733;
+}
+.white-panel a {
+  font-size: 0.5em;
+  color: #a92733;
+}
+.white-panel span {
+  font-size: 12px;
+  color: #a92733;
+}
+.white-panel:hover {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  margin-top: -5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}

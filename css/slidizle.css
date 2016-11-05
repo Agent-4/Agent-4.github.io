@@ -1,0 +1,105 @@
+/*Base slidizle styling :*/
+ .container4 {
+  max-width: 100%;
+  margin: 0px auto;
+}
+.slidizle {
+  position: relative;
+  overflow: hidden; 
+}
+.slidizle-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 245px;
+  height: 100px; 
+}
+.slidizle-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: none; 
+}
+.slidizle-slide.active {
+    display: block; 
+}
+.slidizle-navigation {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10; 
+}
+.slidizle-navigation li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: white;
+  opacity: .2;
+  font-size: 1px;
+  text-indent: -99999px;
+  margin: 0 2px;
+  cursor: pointer;
+  -moz-transition: opacity 0.2s ease-in-out 0s;
+  -o-transition: opacity 0.2s ease-in-out 0s;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition: opacity 0.2s ease-in-out 0s; 
+}
+ 
+.slidizle-navigation li:hover, .slidizle-navigation li.active {
+    opacity: 1; 
+}
+/* Sample :*/
+.sample {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 46%;
+  text-align: center;
+  margin-bottom: 0; 
+}
+/*Slider progressbar*/
+.slider-progressbar {
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background: #eb4f38;
+  z-index: 20; 
+}
+/* Animated slider*/
+.slider--animated .slidizle-content > .active ~ .slidizle-slide {
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%); 
+}
+.slider--animated .slidizle-slide {
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -moz-transition: -moz-transform 0.5s ease-in-out 0s;
+  -o-transition: -o-transform 0.5s ease-in-out 0s;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition: transform 0.5s ease-in-out 0s;
+  display: block !important; 
+}
+.slider--animated .slidizle-slide.active {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  z-index: 2; 
+}
