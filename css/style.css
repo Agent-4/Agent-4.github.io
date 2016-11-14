@@ -2423,7 +2423,7 @@ ol.toc {
 .widget ol li,
 .widget ul .category-list-child,
 .widget ol .category-list-child {
-  padding: 4px 60px;
+  padding: 4px 45px;
   font-size: 14px;
   border-bottom: 1px solid border-color;
 }
