@@ -4,17 +4,20 @@
     <meta charset="utf-8">
     <meta name="baidu-site-verification" content="fioP769Q6G" />
     
-    <title>分类: Swift | FOUR's Time and Space</title>
+    <title>Swift3.0 设置Tabbar顶部阴影 | FOUR's Time and Space</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="I will not forget one line of this.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FOUR">
-<meta property="og:url" content="https://agent-4.github.io/categories/Swift/index.html">
+    <meta name="description" content="使用过慕课网的iOS客户端，看到他的标签栏顶部不是系统样式的一条黑线，而是阴影效果；我觉得这种效果很不错，于是就自己想办法去实现这种效果。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift3.0 设置Tabbar顶部阴影">
+<meta property="og:url" content="https://agent-4.github.io/2016/10/24/Swift3.0-tabbarShadow/index.html">
 <meta property="og:site_name" content="FOUR">
-<meta property="og:description" content="I will not forget one line of this.">
+<meta property="og:description" content="使用过慕课网的iOS客户端，看到他的标签栏顶部不是系统样式的一条黑线，而是阴影效果；我觉得这种效果很不错，于是就自己想办法去实现这种效果。">
+<meta property="og:image" content="http://og7heq3lq.bkt.clouddn.com/shadow1.jpg">
+<meta property="og:updated_time" content="2016-11-16T17:43:23.113Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FOUR">
-<meta name="twitter:description" content="I will not forget one line of this.">
+<meta name="twitter:title" content="Swift3.0 设置Tabbar顶部阴影">
+<meta name="twitter:description" content="使用过慕课网的iOS客户端，看到他的标签栏顶部不是系统样式的一条黑线，而是阴影效果；我觉得这种效果很不错，于是就自己想办法去实现这种效果。">
+<meta name="twitter:image" content="http://og7heq3lq.bkt.clouddn.com/shadow1.jpg">
     
     
     
@@ -150,121 +153,196 @@ var _hmt = _hmt || [];
 </header>
 
         <div class="outer">
-            <section id="main">
+            <section id="main"><article id="post-Swift3.0-tabbarShadow" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Swift3.0 设置Tabbar顶部阴影
+        </h1>
+    
 
-<section class="layout-wrap">
-    <div class="layout-title">
-        <span><img src="/css/images/categories.png" /> 分类</span>
-        <hr>
-        <div class="layout-wrap-inner list-categories">
+                <div class="article-meta">
+                    
+    <div class="article-date">
+    	<img src="/css/images/date.png" />
+        <a href="/2016/10/24/Swift3.0-tabbarShadow/">
+            <time datetime="2016-10-23T16:00:00.000Z" itemprop="datePublished">2016-10-24</time>
+        </a>
+    </div>
+
+
+                    
+    <div class="article-category">
+    	<img src="/css/images/files.png" />
+        <a class="article-category-link" href="/categories/Swift/">Swift</a>
+    </div>
+
+                    
+    <div class="article-tag">
+        <img src="/css/images/tag.png" />
+        <a class="tag-link" href="/tags/Swift3-0/">Swift3.0</a>
+    </div>
+
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
             
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Swift/">Swift</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">日记</a><span class="category-list-count">7</span></li></ul>
-            
+            <p>使用过慕课网的iOS客户端，看到他的标签栏顶部不是系统样式的一条黑线，而是阴影效果；<br>我觉得这种效果很不错，于是就自己想办法去实现这种效果。<br><a id="more"></a></p>
+<p>首先来看看慕课网的iOS客户端的<strong> Tabbar </strong>顶部阴影效果:</p>
+<p><img src="http://og7heq3lq.bkt.clouddn.com/shadow1.jpg" alt="慕课网iOS客户端Tabbar"><br>我自己找到的实现方法很简单，就是把<strong><em> tabbar </em></strong>系统的<strong><em> shadowImage </em></strong>给替换掉，具体代码非常少，需要导入一张设计好的阴影图片。<br>在<strong><em> viewDidLoad </em></strong>中加入以下代码</p>
+<figure class="highlight objc"><figcaption><span>Swift Code</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去除tabbar顶部黑线,换成阴影</span></div><div class="line"><span class="keyword">self</span>.tabBarController?.tabBar.shadowImage = <span class="built_in">UIImage</span>(named: <span class="string">"tabbar_shadow"</span>)</div><div class="line"><span class="comment">//必须要初始化tabbar背景图片，否则还是原来的系统样式</span></div><div class="line"><span class="keyword">self</span>.tabBarController?.tabBar.backgroundImage = <span class="built_in">UIImage</span>()</div><div class="line"><span class="comment">//设置tabbar背景颜色为白色</span></div><div class="line"><span class="keyword">self</span>.tabBarController?.tabBar.backgroundColor = <span class="built_in">UIColor</span>.white</div></pre></td></tr></table></figure>
+<p>最终实现的效果图:<br><img src="http://og7heq3lq.bkt.clouddn.com/shadow2.jpg" alt="Tabbar顶部阴影"><br><br></p>
+
+        
         </div>
-    </div>
-</section>
+        <footer class="article-footer">
+            <div class="share-container">
 
 
-<div class="timeline-wrap4">
-    <div class="title_major title-row">
-        <h1 class="title">Swift</h1>
-    </div>
-    <div class="post-row">
-        <ul id="timeline-post">
-            
-                <li>
-                    <div class="item-inner">
-                        
-                            <a href="/2016/10/24/Swift3.0-tabbarShadow/">
-    
-    
-    	<img class="thumbnail-img" src="http://og7heq3lq.bkt.clouddn.com/shadow1.jpg" />  
-    
-</a>
-   
-                        
-                        <p class="item-title">
-    
-            <a class="title" href="/2016/10/24/Swift3.0-tabbarShadow/">Swift3.0 设置Tabbar顶部阴影</a>
-    
 
-                            <br>
-                        <span class="item-date">
-                            <img class="img-date" src="/css/images/date.png" /><a href="/2016/10/24/Swift3.0-tabbarShadow/"><time datetime="2016-10-23T16:00:00.000Z" itemprop="datePublished">2016-10-24</time></a>
-                            
-                            <img class="img-category" src="/css/images/files.png" />
-                            <a class="article-category-link" href="/categories/Swift/">Swift</a>
-                            
-                            <img class="img-tag" src="/css/images/tag.png" />
-                            <a class="tag-link" href="/tags/Swift3-0/">Swift3.0</a>
-                        </span>
-                        </p>
-                    </div>
-                </li>
-            
-                <li>
-                    <div class="item-inner">
-                        
-                            <a href="/2016/10/15/Swift3.0-prefersStatusBarHidden/">
-    
-    
-    	<img class="thumbnail-img" src="http://og7heq3lq.bkt.clouddn.com/swift/Error.png" />  
-    
-</a>
-   
-                        
-                        <p class="item-title">
-    
-            <a class="title" href="/2016/10/15/Swift3.0-prefersStatusBarHidden/">Swift3.0 隐藏状态栏</a>
-    
-
-                            <br>
-                        <span class="item-date">
-                            <img class="img-date" src="/css/images/date.png" /><a href="/2016/10/15/Swift3.0-prefersStatusBarHidden/"><time datetime="2016-10-14T16:00:00.000Z" itemprop="datePublished">2016-10-15</time></a>
-                            
-                            <img class="img-category" src="/css/images/files.png" />
-                            <a class="article-category-link" href="/categories/Swift/">Swift</a>
-                            
-                            <img class="img-tag" src="/css/images/tag.png" />
-                            <a class="tag-link" href="/tags/Swift3-0/">Swift3.0</a>
-                        </span>
-                        </p>
-                    </div>
-                </li>
-            
-                <li>
-                    <div class="item-inner">
-                        
-                            <a href="/2016/10/14/Swift-GuideView/">
-    
-    
-    	<img class="thumbnail-img" src="http://og7heq3lq.bkt.clouddn.com/swift/GuideView.gif" />  
-    
-</a>
-   
-                        
-                        <p class="item-title">
-    
-            <a class="title" href="/2016/10/14/Swift-GuideView/">Swift3.0 iOS 引导页</a>
-    
-
-                            <br>
-                        <span class="item-date">
-                            <img class="img-date" src="/css/images/date.png" /><a href="/2016/10/14/Swift-GuideView/"><time datetime="2016-10-13T16:00:00.000Z" itemprop="datePublished">2016-10-14</time></a>
-                            
-                            <img class="img-category" src="/css/images/files.png" />
-                            <a class="article-category-link" href="/categories/Swift/">Swift</a>
-                            
-                            <img class="img-tag" src="/css/images/tag.png" />
-                            <a class="tag-link" href="/tags/Swift3-0/">Swift3.0</a>
-                        </span>
-                        </p>
-                    </div>
-                </li>
-            
-        </ul>
-    </div>
 </div>
+
+    <a data-url="https://agent-4.github.io/2016/10/24/Swift3.0-tabbarShadow/" data-id="civl7wszs0002igs2uck2rhbq" class="article-share-link"><i class="fa fa-share-alt"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<div class="article-share-links">',
+                            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到微博"><img src="/css/images/Weibo.png" /></a>',
+                            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ空间"><img src="/css/images/QQZone.png" /></a>',
+                            '<a href="http://v.t.qq.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ微博"><img src="/css/images/QQWeibo.png" /></a>',
+                            '<a href="#" class="article-share-icons" title="分享到微信（暂时不能分享）"><img src="/css/images/Wechat.png" /></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 23,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://agent-4.github.io/2016/10/24/Swift3.0-tabbarShadow/#comments" class="article-comment-link ds-thread-count" data-thread-key="2016/10/24/Swift3.0-tabbarShadow/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/10/15/Swift3.0-prefersStatusBarHidden/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Swift3.0 隐藏状态栏</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/10/24/Swift3.0-tabbarShadow/" data-title="Swift3.0 设置Tabbar顶部阴影" data-url="https://agent-4.github.io/2016/10/24/Swift3.0-tabbarShadow/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 5px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
 
 <style>
     @media screen and (min-width: 1200px) {
@@ -278,8 +356,28 @@ var _hmt = _hmt || [];
         left: 5%;
         width: 90%;
       }
+      .article-title{
+        text-align:center;
+      }
+    }
+    @media screen and (min-width: 560px) and (max-width: 799px) {
+      .article-title{
+        text-align:center;
+      }
+    }
+    @media screen and (max-width: 559px) {
+      .article-title{
+        text-align:center;
+      }
+    }
+    @media screen and (min-width: 800px) and (max-width: 1199px) {
+      .article-title{
+        text-align:center;
+      }
     }
 </style>
+
+
 </section>
             
                 
