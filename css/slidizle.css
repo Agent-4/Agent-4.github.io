@@ -106,18 +106,48 @@
 
 
 /*about page css*/
+    .about_en{
+      float: right;
+    }
+    .about_en span{
+      font-size: 8px;
+      color: #ddd;
+      padding-right: 6px;
+    }
+    .about_en a{
+      float: right;
+      padding: 0 3px;
+      font-size: 12px;
+      color: #fff;
+      background:#6ecadc;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    .about_en a:hover{
+      text-decoration:none;
+      opacity: 0.7;
+    }
+
+    .infoStyle{
+      margin: 0 80px;
+    }
+
     .me {
       margin:2em 0;
     }
     .me h3{
       color: #FFF;
-      padding: 5px 26px 5px 30px;
+      padding: 5px 30px 5px 30px;
       display: inline-block;
+      font-weight: 500;
+      border-radius: 5px;
     }
     .skills h3{
       color: #FFF;
-      padding: 5px 98px 5px 30px;
+      padding: 5px 30px 5px 30px;
       display: inline-block;
+      font-weight: 500;
+      border-radius: 5px;
     }
     .me_details,.education_details {
       padding:0 0 0 2em;
@@ -125,7 +155,7 @@
     .me_details h4,.education_details h4{
       color:#333;
       font-weight:600;
-      font-size:1.4em;
+      font-size: 16px;
       margin-top: 4px;
       margin-bottom:6px;
     }
@@ -156,6 +186,7 @@
        width:25%;
     }
     .skill1 h4,.skill2 h4{
+      font-size: 16px;
       color:#333;
       font-weight:600;
       margin-bottom:0;
@@ -170,35 +201,31 @@
     .education  h3{
       background: #999;
       color: #FFF;
-      padding: 5px 170px 5px 30px;
+      padding: 5px 30px 5px 30px;
       display: inline-block;
+      font-weight: 500;
+      border-radius: 5px;
     }
     h3.me1{
       background:#6ecadc;
-      border-radius: 5px;
     }
     h3.me2{
       background:#b04bf3;
-      border-radius: 5px;
     }
     h3.me3{
       background:#3eb991;
-      padding: 5px 36px 5px 30px;
-      border-radius: 5px;
     }
     h3.me4{
       background:#e9a820;
-      padding: 5px 22px 5px 30px;
-      border-radius: 5px;
     }
     h3.me5{
       background:#FF82AB;
-      padding: 5px 80px 5px 30px;
-      border-radius: 5px;
     }
 
     @media (max-width: 768px){
-
+    .infoStyle{
+      margin: 0 50px;
+    }
     .me h3,.skills h3,.education h3{
       font-size: 1.2em;
     }
@@ -226,16 +253,22 @@
     }
     }
     @media (max-width: 414px){
+    .infoStyle{
+      margin: 0;
+    }
     .skill1 ul, .skill2 ul {
       padding-left: 3em;
     }
     }
     @media (max-width: 384px){
+    .infoStyle{
+      margin: 0;
+    }
     .me_details, .education_details,.skill_info  {
       padding: 1em 0 0em 1em;
     }
     .me h3 {
-      padding: 5px 41px 5px 16px;
+      padding: 5px 30px 5px 30px;
     }
     .me_details h4, .education_details h4 {
       font-size: 0.9em;
@@ -253,7 +286,7 @@
       font-size: 1em;
     }
     .skills h3 {
-      padding: 5px 98px 5px 16px;
+      padding: 5px 30px 5px 30px;
     }
     .skill1 ul, .skill2 ul {
       padding-left: 0.5em;
@@ -265,10 +298,13 @@
       padding: 0.5em 0 0 1.5em;
     }
     .education h3 {
-      padding: 5px 190px 5px 16px;
+      padding: 5px 30px 5px 30px;
     }
     }
     @media (max-width: 320px){
+    .infoStyle{
+      margin: 0;
+    }
     .skill1 h4, .skill2 h4 {
       font-size: 0.85em;
     }
@@ -298,16 +334,19 @@
         border-radius: 50%;
     }
     .details{
-      width:58%;
+      width:55%;
       float:right;
       padding: 2em 0;
     }
     .details h3{
       font-weight:500;
       font-size:0.9em;
-      color: #999;
+      color: #fff;
       margin-top: 1em;
       margin-bottom: 1px;
+      padding: 5px 10px;
+      display: inline-block;
+      border-radius: 5px;
     }  
     .details p{
       color:#565a5f;
@@ -332,7 +371,7 @@
     }
     }
     @media (max-width: 1024px){
-      .sidebar img{
+    .sidebar img{
       padding:2em 4em;
       width:80%;
 
@@ -410,22 +449,22 @@
       padding-left: 0;
     }
     .education  h3{
-      padding: 5px 140px 5px 30px;
+      padding: 5px 30px 5px 30px;
       
     }
     h3.me3{
       background:#3eb991;
-      padding: 5px 36px 5px 30px;
+      padding: 5px 30px 5px 30px;
       border-radius: 5px;
     }
     h3.me4{
       background:#e9a820;
-      padding: 5px 22px 5px 30px;
+      padding: 5px 30px 5px 30px;
       border-radius: 5px;
     }
     h3.me5{
       background:#FF82AB;
-      padding: 5px 70px 5px 30px;
+      padding: 5px 30px 5px 30px;
       border-radius: 5px;
     }
     }
@@ -447,11 +486,9 @@
       width:95%;
       float:right;
       padding: 0 0 1em 0;
-      margin-top: 0;
       }
     .details h3{
       margin-top: 0;
-      padding-top: 0;
     }
     .skill1,.skill2{
        float:left;
