@@ -132,6 +132,61 @@
       margin: 0 80px;
     }
 
+    .sidebar{
+      background: #fff;
+      border: 1px solid #f4f7f8;
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 1px 1px #f5f8f9;
+    }
+    .sidebar_top{
+      width:30%;
+      float:left;
+    }
+    .sidebar_top img:hover{
+      opacity: 0.9;
+    }
+    .sidebar h1{
+      font-size:2.5em;
+      font-weight:700;
+      color:#fff; 
+    }
+    .sidebar img{
+      padding:2em 4em;
+      width:80%;
+      border-radius: 50%;
+    }
+    .details{
+      width:55%;
+      float:right;
+      padding: 2em 0;
+    }
+    .details h3{
+      font-weight:500;
+      font-size:0.9em;
+      color: #fff;
+      margin-top: 1em;
+      margin-bottom: 1px;
+      padding: 5px 10px;
+      display: inline-block;
+      border-radius: 5px;
+    }  
+    .details p{
+      color:#565a5f;
+      font-size:1em;
+      margin:6px 0 0 0.8em;
+      font-weight: 500;
+    }
+    /*----*/
+    .clearfix:before,
+    .clearfix:after {
+      display: table;
+      content: " ";
+    }
+    .clearfix:after {
+      clear: both;
+    }
+
     .me {
       margin:2em 0;
     }
@@ -183,7 +238,7 @@
     }
     .skill1,.skill2{
        float:left;
-       width:25%;
+       width:26%;
     }
     .skill1 h4,.skill2 h4{
       font-size: 16px;
@@ -222,7 +277,26 @@
       background:#FF82AB;
     }
 
-    @media (max-width: 768px){
+/************1366px*************/
+@media (max-width: 1366px){
+    .sidebar img{
+      padding:2em 4em;
+      width:80%;
+    }
+}
+/************1024px*************/
+@media (max-width: 1024px){
+    .sidebar img{
+      padding:2em 4em;
+      width:80%;
+    }
+    .skill1,.skill2{
+      float:left;
+      width:30%;
+    }
+}
+/************768px*************/
+@media (max-width: 768px){
     .infoStyle{
       margin: 0 50px;
     }
@@ -238,9 +312,20 @@
     .me_details p, .skill_info p, .education_details p {
       font-size: 0.8em;
     }
-    .skill1, .skill2 {
-      float: left;
-      width: 50%;
+    .sidebar img{
+      padding:2em 4em;
+      width:90%;
+    }
+    .details{
+      width:50%;
+      float:right;
+    }
+    .skill1,.skill2{
+       float:left;
+       width:40%;
+    }
+    .skill1 ul, .skill2 ul {
+      padding-left: 0;
     }
     .skill1 ul li,.skill2 ul li{
       font-size:0.85em;
@@ -251,16 +336,42 @@
     .skill_list {
       padding: 0.7em 0 0 2em;
     }
-    }
-    @media (max-width: 414px){
+}
+/************414px*************/
+@media (max-width: 414px){
     .infoStyle{
       margin: 0;
     }
+    .sidebar img{
+      width:60%;
+      display: block;
+      margin-left: 40%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .sidebar_top{
+      width:50%;
+      float:left;
+    }
+    .details{
+      width:95%;
+      float:right;
+      padding: 0 0 1em 0;
+      margin-top: 0;
+      }
+    .details h3{
+      margin-top: 0;
+    }
+    .skill1,.skill2{
+      float:left;
+      width:45%;
+    }
     .skill1 ul, .skill2 ul {
-      padding-left: 3em;
+      padding-left: 0;
     }
-    }
-    @media (max-width: 384px){
+}
+/************384px*************/
+@media (max-width: 384px){
     .infoStyle{
       margin: 0;
     }
@@ -289,7 +400,7 @@
       padding: 5px 30px 5px 30px;
     }
     .skill1 ul, .skill2 ul {
-      padding-left: 0.5em;
+      padding-left: 0;
     }
     .skill1 ul li, .skill2 ul li {
       font-size: 0.75em;
@@ -300,105 +411,6 @@
     .education h3 {
       padding: 5px 30px 5px 30px;
     }
-    }
-    @media (max-width: 320px){
-    .infoStyle{
-      margin: 0;
-    }
-    .skill1 h4, .skill2 h4 {
-      font-size: 0.85em;
-    }
-    .skill1 ul, .skill2 ul {
-      padding-left: 1em;
-    }
-    }
-    .sidebar{
-      background: #fff;
-      border: 1px solid #f5f8f9;
-      width: 100%;
-      border-radius: 5px;
-      box-shadow: 0 1px 2px #f5f8f9;
-    }
-    .sidebar_top{
-      width:30%;
-      float:left;
-    }
-    .sidebar h1{
-      font-size:2.5em;
-      font-weight:700;
-      color:#fff; 
-    }
-    .sidebar img{
-      padding:2em 4em;
-      width:80%;
-        border-radius: 50%;
-    }
-    .details{
-      width:55%;
-      float:right;
-      padding: 2em 0;
-    }
-    .details h3{
-      font-weight:500;
-      font-size:0.9em;
-      color: #fff;
-      margin-top: 1em;
-      margin-bottom: 1px;
-      padding: 5px 10px;
-      display: inline-block;
-      border-radius: 5px;
-    }  
-    .details p{
-      color:#565a5f;
-      font-size:1em;
-      margin:6px 0 0 0.8em;
-      font-weight: 500;
-    }
-    /*----*/
-    .clearfix:before,
-    .clearfix:after {
-      display: table;
-      content: " ";
-    }
-    .clearfix:after {
-      clear: both;
-    }
-
-    @media (max-width: 1366px){
-      .sidebar img{
-      padding:2em 4em;
-      width:80%;
-    }
-    }
-    @media (max-width: 1024px){
-    .sidebar img{
-      padding:2em 4em;
-      width:80%;
-
-    }
-    .skill1,.skill2{
-       float:left;
-       width:30%;
-    }
-    }
-    @media (max-width: 768px){
-    .sidebar img{
-      padding:2em 4em;
-      width:90%;
-    }
-    .skill1,.skill2{
-       float:left;
-       width:50%;
-    }
-    .details{
-      width:55%;
-      float:right;
-      }
-    .skill1 ul, .skill2 ul {
-      padding-left: 0;
-    }
-    }
-    @media (max-width: 414px){
     .sidebar img{
       width:60%;
       display: block;
@@ -419,56 +431,9 @@
     .details h3{
       margin-top: 0;
     }
-    .skill1 ul, .skill2 ul {
-      padding-left: 0;
-    }
-    
-    }
-    @media (max-width: 384px){
-    .sidebar img{
-      width:60%;
-      display: block;
-      margin-left: 40%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .sidebar_top{
-      width:50%;
-      float:left;
-    }
-    .details{
-      width:95%;
-      float:right;
-      padding: 0 0 1em 0;
-      margin-top: 0;
-      }
-    .details h3{
-      margin-top: 0;
-    }
-    .skill1 ul, .skill2 ul {
-      padding-left: 0;
-    }
-    .education  h3{
-      padding: 5px 30px 5px 30px;
-      
-    }
-    h3.me3{
-      background:#3eb991;
-      padding: 5px 30px 5px 30px;
-      border-radius: 5px;
-    }
-    h3.me4{
-      background:#e9a820;
-      padding: 5px 30px 5px 30px;
-      border-radius: 5px;
-    }
-    h3.me5{
-      background:#FF82AB;
-      padding: 5px 30px 5px 30px;
-      border-radius: 5px;
-    }
-    }
-    @media (max-width: 325px){
+}
+/************325px*************/
+@media (max-width: 325px){
     .sidebar img{
       width:60%;
       display: block;
@@ -486,39 +451,43 @@
       width:95%;
       float:right;
       padding: 0 0 1em 0;
-      }
+    }
     .details h3{
       margin-top: 0;
     }
-    .skill1,.skill2{
-       float:left;
-       width:50%;
+    .skill_list{
+      padding:0 0 0 1em;
+    }
+    .skill1{
+      float:left;
+      width:45%;
+    }
+    .skill2{
+      float:left;
+      width:55%;
     }
     .skill1 ul, .skill2 ul {
-      padding-left: 0;
-    }
-    .education  h3{
-      padding: 5px 30px 5px 30px;
-      
+      padding: 0;
     }
     .skills h3{
       color: #FFF;
       padding: 5px 30px 5px 30px;
       display: inline-block;
     }
-    h3.me3{
-      background:#3eb991;
+    .education  h3{
       padding: 5px 30px 5px 30px;
-      border-radius: 5px;
+      
     }
-    h3.me4{
-      background:#e9a820;
-      padding: 5px 30px 5px 30px;
-      border-radius: 5px;
+}
+/************320px*************/
+@media (max-width: 320px){
+    .infoStyle{
+      margin: 0;
     }
-    h3.me5{
-      background:#FF82AB;
-      padding: 5px 30px 5px 30px;
-      border-radius: 5px;
+    .skill1 h4, .skill2 h4 {
+      font-size: 0.85em;
     }
+    .skill1 ul, .skill2 ul {
+      padding-left: 0;
     }
+}
