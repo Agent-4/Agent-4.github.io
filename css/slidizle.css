@@ -362,6 +362,9 @@
     .details h3{
       margin-top: 0;
     }
+    .details p{
+      margin:6px 0 6px 0.8em;
+    }
     .skill1,.skill2{
       float:left;
       width:45%;
@@ -430,6 +433,9 @@
       }
     .details h3{
       margin-top: 0;
+    }
+    .details p{
+      margin:6px 0 6px 0.8em;
     }
 }
 /************325px*************/
