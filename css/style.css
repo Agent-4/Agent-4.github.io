@@ -1008,8 +1008,8 @@ a.article-title:hover {
   font-size: 12px;
 }
 .article-meta a {
-  color: #565a5f;
-  font-size: 12px;
+  color: #aaa;
+  font-size: 10px;
 }
 .article-meta a:hover {
   color: #38b7ea;
@@ -1205,13 +1205,13 @@ a.article-title:hover {
   clear: both;
 }
 .article-footer a {
-  font-size: 1em;
-  color: #999;
+  font-size: 10px;
+  color: #aaa;
   text-decoration: none;
   margin: 6px 2px 6px 8px;
 }
 .article-footer a:hover {
-  color: #565a5f;
+  color: #38b7ea;
 }
 .article-comment-link {
   float: right;
@@ -1863,16 +1863,13 @@ ol.toc {
 }
 .timeline-row .content h1,
 .timeline-row .content .article-meta {
-  padding: 10px;
+  padding: 10px 0 8px 10px;
 }
 .timeline-row .content h1 {
   font-size: 16px;
 }
 .timeline-row .content .article-meta {
-  font-size: 12px;
-  color: #898d92;
-  border-top: 1px solid #f7f7f7;
-  background-color: rgba(244,246,247,0.2);
+  padding: 0 0 7px 12px;
 }
 .timeline-row-major .node {
   width: 14px;
@@ -2550,7 +2547,7 @@ ol.toc {
 }
 #recent-post li .item-inner .item-date {
   color: #aaa;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: none;
 }
 #recent-post li .item-inner .item-date a {
@@ -2705,7 +2702,7 @@ ol.toc {
     margin: 0;
     width: 100%;
     height: 100%;
-    background: #f7f7f7;
+    background: #f5f8f9;
   }
 }
 .ins-section-wrapper {
@@ -2718,7 +2715,7 @@ ol.toc {
 }
 .ins-section-container {
   position: relative;
-  background: #f7f7f7;
+  background: #fff;
 }
 .ins-section {
   font-size: 14px;
@@ -2729,8 +2726,9 @@ ol.toc {
   padding: 8px 15px;
 }
 .ins-section .ins-section-header {
-  color: #9a9a9a;
-  border-bottom: 1px solid #e2e2e2;
+  color: #888;
+  background: #f5f8f9;
+  padding: 6px 10px;
 }
 .ins-section .ins-slug {
   margin-left: 5px;
