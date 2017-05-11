@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://moxiaohao.com/</title>
+  <link>http://moxiaohao.com/</link>
+
+<item>
+     <link>http://moxiaohao.com/</link>
+     <title>FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/archives/</link>
+     <title>归档 | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/categories/</link>
+     <title>分类 | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/</link>
+     <title>标签 | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/albums/</link>
+     <title>相册 | FOUR's Time and Space</title>
+     <description>小11
+	
+	
+		
+		Rory
+	
+	
+		
+		Amy
+	
+	
+		
+		All
+	
+	
+		
+		CHLOE
+	
+	
+		
+		BUDDY
+	
+	
+		
+		POPS
+	
+	
+		
+		MEL
+	
+	
+		
+		GIDGET
+	
+	
+		
+		SWEETPEA
+	
+	
+		
+		DUKE
+	
+	
+		
+		MAX
+	
+	
+		
+		SNOWBALL
+	
+
+
+
+	$(fun</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/about/</link>
+     <title>关于我 | FOUR's Time and Space</title>
+     <description>EN中
+	 
+	 
+		 
+			 
+		 
+		
+			 昵称
+			 FOUR  	 
+			 邮箱 &amp;amp; 手机
+			 1028594899@qq.com &amp;amp; 157*****721
+			 位置
+			 中国，惠州市
+			 个性签名
+			 我是一个梦想有一天和 Tardis 去旅行的地球人。
+		
+		
+	 
+	 
+	 
+	 
+	 教育背景
+	 
+		 惠州学院  2013.09 —</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/message/</link>
+     <title>留言 | FOUR's Time and Space</title>
+     <description>既然来了，那就说点什么吧！欢迎大家在下方留言！ ❤ ❤ ❤ ❤</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/Swift3.0-SimpleCodedClock/</link>
+     <title>Swift3.0 简单数字密码锁 | FOUR's Time and Space</title>
+     <description>有些 App 是有应用锁，一般都是4位数字密码或手势密码，这样设计可以保护自己的个人隐私，防止手机给别人玩时进入到该应用查看个人隐私。设置4位数字密码是常用的方式，既简单易记，又有一定程度上的保护作用。</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/categories/Swift/</link>
+     <title>分类: Swift | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/CodedLock/</link>
+     <title>标签: CodedLock | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/Swift3.0-MJRefreshSimpleTest/</link>
+     <title>Swift3.0 MJRefresh 的简单使用 | FOUR's Time and Space</title>
+     <description>当我们需要使用下拉刷新数据的时候，我们可以使用 UIRefreshControl，也可以在网上找到众多第三方的刷新库，而 MJRefresh 是一个非常优秀且非常多人使用的刷新库。</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/Swift3-0/</link>
+     <title>标签: Swift3.0 | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/Swift3.0-PictureDrop-downEnlarge/</link>
+     <title>Swift3.0 顶部图片下拉放大 | FOUR's Time and Space</title>
+     <description>许多App都有这种在 “个人中心” 页面顶部图片下拉放大的效果，体验效果不错！做出这种效果出来没有什么难度，这里介绍下我弄得方法。</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/Swift3.0-tabbarShadow/</link>
+     <title>Swift3.0 设置Tabbar顶部阴影 | FOUR's Time and Space</title>
+     <description>使用过慕课网的iOS客户端，看到他的标签栏顶部不是系统样式的一条黑线，而是阴影效果；我觉得这种效果很不错，于是就自己想办法去实现这种效果。</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/Swift3.0-prefersStatusBarHidden/</link>
+     <title>Swift3.0 隐藏状态栏 | FOUR's Time and Space</title>
+     <description>Swift3.0 语言的到来，带来了新的特性、惊喜与变化Swift3.0 以前的一些语法，在 Swift3.0 上就不能用了，这里看看隐藏状态栏语法的改变</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/Swift-GuideView/</link>
+     <title>Swift3.0 iOS 引导页 | FOUR's Time and Space</title>
+     <description>iOS 手机应用中常见的引导页面这里在 Xcode8 上使用 Swift3.0 语言编写</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/Coding/</link>
+     <title>我的 Coding 活跃图 | FOUR's Time and Space</title>
+     <description>我的 Coding 活跃图 | FOUR's Time and Space</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/categories/Diary/</link>
+     <title>分类: 日记 | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/Coding/</link>
+     <title>标签: Coding | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/changes/</link>
+     <title>Farmland changes | FOUR's Time and Space</title>
+     <description>美丽小村庄的 Farmland changes，I enjoyed it immensely.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/farmland/</link>
+     <title>标签: farmland | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/life-and-memory/</link>
+     <title>生活and记忆 | FOUR's Time and Space</title>
+     <description>1、Everyone’s memory is a mess, Life is a mess.2、Everyone’s got memories of a holiday they couldn’t have been on, or a party they never went to, or met someone for the first time.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/Life/</link>
+     <title>标签: Life | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2016/kobe/</link>
+     <title>科比 Thank You | FOUR's Time and Space</title>
+     <description>再见科比，青春仿佛因你而谢幕I dont want to be the next Michael Jordan, I only want to be Kobe Bryant.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/kobe/</link>
+     <title>标签: kobe | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/page/2/</link>
+     <title>FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/archives/page/2/</link>
+     <title>归档 | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/doctor/</link>
+     <title>标签: 博士 | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/tags/Monsters/</link>
+     <title>标签: Monsters | FOUR's Time and Space</title>
+     <description>I will not forget one line of this.</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/albums/index.html</link>
+     <title>相册 | FOUR's Time and Space</title>
+     <description>小11
+	
+	
+		
+		Rory
+	
+	
+		
+		Amy
+	
+	
+		
+		All
+	
+	
+		
+		CHLOE
+	
+	
+		
+		BUDDY
+	
+	
+		
+		POPS
+	
+	
+		
+		MEL
+	
+	
+		
+		GIDGET
+	
+	
+		
+		SWEETPEA
+	
+	
+		
+		DUKE
+	
+	
+		
+		MAX
+	
+	
+		
+		SNOWBALL
+	
+
+
+
+	$(fun</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/about/index.html</link>
+     <title>关于我 | FOUR's Time and Space</title>
+     <description>EN中
+	 
+	 
+		 
+			 
+		 
+		
+			 昵称
+			 FOUR  	 
+			 邮箱 &amp;amp; 手机
+			 1028594899@qq.com &amp;amp; 157*****721
+			 位置
+			 中国，惠州市
+			 个性签名
+			 我是一个梦想有一天和 Tardis 去旅行的地球人。
+		
+		
+	 
+	 
+	 
+	 
+	 教育背景
+	 
+		 惠州学院  2013.09 —</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/message/index.html</link>
+     <title>留言 | FOUR's Time and Space</title>
+     <description>既然来了，那就说点什么吧！欢迎大家在下方留言！ ❤ ❤ ❤ ❤</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2015/Hello-Doctor/</link>
+     <title>Hello Doctor | FOUR's Time and Space</title>
+     <description>神秘博士震撼视频        神秘博士震撼视频您的浏览器不支持video标签！</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2014/MonstersUniversity/</link>
+     <title>《怪兽大学》里的人生哲理 | FOUR's Time and Space</title>
+     <description>盘点那些《怪兽大学》教我们的事梦想现实相得益彰</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://moxiaohao.com/2013/the-time-of-doctor/</link>
+     <title>The Time Of Doctor | FOUR's Time and Space</title>
+     <description>2013年的Christmas day，他离开了；
+这个他最后一天作为博士的圣诞节，注定是个悲伤的日子，</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

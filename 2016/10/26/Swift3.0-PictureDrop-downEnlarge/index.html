@@ -2,62 +2,74 @@
 <html lang=zh>
 <head>
     <meta charset="utf-8">
-    <meta name="baidu-site-verification" content="fioP769Q6G" />
+    <meta name="baidu-site-verification" content="B3OjEgnk7h" />
+    <meta name="google-site-verification" content="ZlH-4PWam9R5XW1N7SSejKOQs6fUgQOutZgYL2Vohhg" />
     
     <title>Swift3.0 顶部图片下拉放大 | FOUR's Time and Space</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="许多App都有这种在“个人中心”页面顶部图片下拉放大的效果，体验效果不错！做出这种效果出来没有什么难度，这里介绍下我弄得方法。">
+    <meta name="description" content="许多App都有这种在 “个人中心” 页面顶部图片下拉放大的效果，体验效果不错！做出这种效果出来没有什么难度，这里介绍下我弄得方法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift3.0 顶部图片下拉放大">
 <meta property="og:url" content="http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/index.html">
 <meta property="og:site_name" content="FOUR">
-<meta property="og:description" content="许多App都有这种在“个人中心”页面顶部图片下拉放大的效果，体验效果不错！做出这种效果出来没有什么难度，这里介绍下我弄得方法。">
+<meta property="og:description" content="许多App都有这种在 “个人中心” 页面顶部图片下拉放大的效果，体验效果不错！做出这种效果出来没有什么难度，这里介绍下我弄得方法。">
 <meta property="og:image" content="http://og7heq3lq.bkt.clouddn.com/EnlargeImage.gif">
-<meta property="og:updated_time" content="2016-11-23T09:58:46.665Z">
+<meta property="og:updated_time" content="2017-01-05T16:16:13.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift3.0 顶部图片下拉放大">
-<meta name="twitter:description" content="许多App都有这种在“个人中心”页面顶部图片下拉放大的效果，体验效果不错！做出这种效果出来没有什么难度，这里介绍下我弄得方法。">
+<meta name="twitter:description" content="许多App都有这种在 “个人中心” 页面顶部图片下拉放大的效果，体验效果不错！做出这种效果出来没有什么难度，这里介绍下我弄得方法。">
 <meta name="twitter:image" content="http://og7heq3lq.bkt.clouddn.com/EnlargeImage.gif">
     
     
     
-    <link rel="icon" href="/four.ico" />
-    <link rel="stylesheet" href="/other/font_awesome/css/font_awesome_min.css">
-    <link rel="stylesheet" href="/other/open_sans/styles.css">
-    <link rel="stylesheet" href="/other/source_code_pro/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/open-sans/styles.css">
+    <link rel="stylesheet" href="/lib/source-code-pro/styles.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/slidizle.css"/>
-    <script src="/other/jquery/2_1_3/jquery_min.js"></script>
-    <script src="/js/pinterest_grid.js"></script>
+    <script src="/lib/jquery.min.js"></script>
     
-    
-        <link rel="stylesheet" href="/other/fancybox/jquery_fancybox.css">
-    
-    
-    
-    
+    <link href="/lib/fancybox/jquery_fancybox.css"" rel="stylesheet">
     
         <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?3f3f75762ebf4cb24937836b23e60320";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?ef23a36cc17973cdc1bbe45f1b4e118d";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
     
 
+        <style>
+            @media screen and (min-width: 1200px) {
+                  #main {
+                    position: relative;
+                    left: 5%;
+                    width: 90%;
+                  }
+                  #profile{
+                    display:none;
+                  }
+            }
+            .article-title{
+                text-align:center;
+            }
+        </style>
+    
 </head>
 <body>
+    <!--<div id="particles-js"></div>
+    <script src="/js/particles.js"></script>-->
     <div id="container">
         <header id="header">
     <div id="header-main" class="header-inner">
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">FOUR</span>
+                <a class="site-title" href="/" data-cont="FOUR">FOUR</a>
             </a>
             <nav id="main-nav">
                 
@@ -72,6 +84,8 @@ var _hmt = _hmt || [];
                     <a class="main-nav-link" href="/albums">相册</a>
                 
                     <a class="main-nav-link" href="/about">关于我</a>
+                
+                    <a class="main-nav-link" href="/message">留言</a>
                 
             </nav>
             
@@ -88,7 +102,7 @@ var _hmt = _hmt || [];
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="站内搜索" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="站内搜索...." />
         <img class="search-form-four" src="/css/images/search.png" />
     </form>
     <div class="ins-search">
@@ -140,6 +154,8 @@ var _hmt = _hmt || [];
                 
                     <td><a class="main-nav-link" href="/about">关于我</a></td>
                 
+                    <td><a class="main-nav-link" href="/message">留言</a></td>
+                
                 <td>
                     
     <div class="search-form">
@@ -169,37 +185,41 @@ var _hmt = _hmt || [];
                 <div class="article-meta">
                     
     <div class="article-date">
-    	<img src="/css/images/date.png" />
-        <a href="/2016/10/26/Swift3.0-PictureDrop-downEnlarge/">
-            <time datetime="2016-10-25T16:00:00.000Z" itemprop="datePublished">2016-10-26</time>
-        </a>
+    	
+    		<i class="fa fa-calendar fa-lg"></i>
+	        <a href="/2016/10/26/Swift3.0-PictureDrop-downEnlarge/">
+	            <time datetime="2016-10-25T16:00:00.000Z" itemprop="datePublished">2016-10-26</time>
+	        </a>
+        
     </div>
-
 
                     
     <div class="article-category">
-    	<img src="/css/images/files.png" />
+    	<i class="fa fa-folder-open fa-lg"></i>
         <a class="article-category-link" href="/categories/Swift/">Swift</a>
     </div>
 
                     
     <div class="article-tag">
-        <img src="/css/images/tag.png" />
+       <i class="fa fa-tags fa-lg"></i>
         <a class="tag-link" href="/tags/Swift3-0/">Swift3.0</a>
     </div>
 
                 </div>
             </header>
         
-        <div class="article-entry" itemprop="articleBody">
         
+        <div class="article-entry" itemprop="articleBody">
             
-            <p>许多App都有这种在“个人中心”页面顶部图片下拉放大的效果，体验效果不错！<br>做出这种效果出来没有什么难度，这里介绍下我弄得方法。<br><a id="more"></a></p>
+            
+            <p>许多App都有这种在 “个人中心” 页面顶部图片下拉放大的效果，体验效果不错！<br>做出这种效果出来没有什么难度，这里介绍下我弄得方法。<br><a id="more"></a></p>
 <p>我自己的实现方法就是在<strong><em> UITableView </em></strong>顶部上方添加加上一张图片（注意：我没有使用<strong> tableHeaderView </strong>，使用<strong> tableHeaderView </strong>的方法我暂时实现不了，不好控制），在图片上加上一个小头像、昵称和个性签名，然后就通过<strong><em> ScrollView </em></strong>代理来实现顶部图片的下拉放大。</p>
 <p>全部代码直接奉上：<br><figure class="highlight objc"><figcaption><span>TestViewController.swift</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  TestViewController.swift</span></div><div class="line"><span class="comment">//  Mo</span></div><div class="line"><span class="comment">//  Created by moxiaohao on 2016/10/25.</span></div><div class="line"><span class="comment">//  Copyright © 2016年 moxiaohao. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line">import <span class="built_in">UIKit</span></div><div class="line"><span class="keyword">class</span> TestViewController: <span class="built_in">UIViewController</span>, <span class="built_in">UIGestureRecognizerDelegate</span>, <span class="built_in">UITableViewDelegate</span>, <span class="built_in">UITableViewDataSource</span> &#123;</div><div class="line">    private let topImageHeight: <span class="built_in">CGFloat</span> = <span class="number">200</span></div><div class="line">    private var topImage: <span class="built_in">UIImageView</span>?</div><div class="line">    private var myAvatar: <span class="built_in">UIImageView</span>?</div><div class="line">    private var myNickName: <span class="built_in">UILabel</span>?</div><div class="line">    private var myBio: <span class="built_in">UILabel</span>?</div><div class="line">    </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        <span class="keyword">super</span>.viewDidLoad()</div><div class="line">        <span class="keyword">self</span>.view.backgroundColor = <span class="built_in">UIColor</span>.white</div><div class="line">        <span class="keyword">self</span>.automaticallyAdjustsScrollViewInsets = <span class="literal">false</span></div><div class="line">        createTableView() </div><div class="line">    &#125;</div><div class="line">    func createTableView() &#123;</div><div class="line">        <span class="comment">//头像</span></div><div class="line">    	let avatar = <span class="built_in">UIImageView</span>(frame: <span class="built_in">CGRect</span>(x: <span class="keyword">self</span>.view.frame.width / <span class="number">2</span> - <span class="number">40</span>, y: <span class="number">75</span>, width: <span class="number">80</span>, height: <span class="number">80</span>))</div><div class="line">        avatar.image = <span class="built_in">UIImage</span>(named: <span class="string">"me"</span>)</div><div class="line">        avatar.contentMode = .scaleAspectFill</div><div class="line">        avatar.layer.cornerRadius = avatar.frame.width / <span class="number">2.0</span></div><div class="line">        avatar.layer.borderColor = <span class="built_in">UIColor</span>.white.cgColor</div><div class="line">        avatar.layer.borderWidth = <span class="number">1.5</span></div><div class="line">        avatar.clipsToBounds = <span class="literal">true</span></div><div class="line">        myAvatar = avatar</div><div class="line">        <span class="comment">//昵称</span></div><div class="line">        let nickName = <span class="built_in">UILabel</span>(frame: <span class="built_in">CGRect</span>(x: <span class="keyword">self</span>.view.frame.width / <span class="number">2</span> - <span class="number">40</span>, y: <span class="number">157</span>, width: <span class="number">80</span>, height: <span class="number">21</span>))</div><div class="line">        nickName.text = <span class="string">"FOUR"</span></div><div class="line">        nickName.textColor = <span class="built_in">UIColor</span>.white</div><div class="line">        nickName.textAlignment = .center</div><div class="line">        nickName.font = <span class="built_in">UIFont</span>.systemFont(ofSize: <span class="number">14.0</span>)</div><div class="line">        myNickName = nickName</div><div class="line">        <span class="comment">//个性签名</span></div><div class="line">        let bio = <span class="built_in">UILabel</span>(frame: <span class="built_in">CGRect</span>(x: <span class="keyword">self</span>.view.frame.width / <span class="number">2</span> - <span class="number">144</span>, y: <span class="number">175</span>, width: <span class="number">288</span>, height: <span class="number">21</span>))</div><div class="line">        bio.text = <span class="string">"有一天，带你去旅行哦！有一天，带你去旅行哦！有一天，带你去旅行哦！"</span></div><div class="line">        bio.textColor = <span class="built_in">UIColor</span>.white</div><div class="line">        bio.textAlignment = .center</div><div class="line">        bio.font = <span class="built_in">UIFont</span>.systemFont(ofSize: <span class="number">12.0</span>)</div><div class="line">        myBio = bio</div><div class="line">        <span class="comment">//顶部图片</span></div><div class="line">        let topImg = <span class="built_in">UIImageView</span>(frame: <span class="built_in">CGRect</span>(x: <span class="number">0</span>, y: -topImageHeight, width: view.bounds.width, height: topImageHeight))</div><div class="line">        topImg.image = <span class="built_in">UIImage</span>(named: <span class="string">"secret"</span>)</div><div class="line">        topImg.contentMode = .scaleAspectFill</div><div class="line">        topImg.clipsToBounds = <span class="literal">true</span></div><div class="line">        topImage = topImg</div><div class="line">        topImage?.addSubview(myAvatar!)</div><div class="line">        topImage?.addSubview(myNickName!)</div><div class="line">        topImage?.addSubview(myBio!)</div><div class="line">        <span class="comment">//tableView</span></div><div class="line">        let tableView = <span class="built_in">UITableView</span>(frame: <span class="built_in">CGRect</span>(x: <span class="number">0</span>, y: <span class="number">0</span>, width: view.bounds.width, height: view.bounds.height),style: .grouped)</div><div class="line">        tableView.delegate = <span class="keyword">self</span></div><div class="line">        tableView.dataSource = <span class="keyword">self</span></div><div class="line">        view.addSubview(tableView)</div><div class="line">        tableView.contentInset = <span class="built_in">UIEdgeInsetsMake</span>(topImageHeight, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</div><div class="line">        tableView.addSubview(topImage!)</div><div class="line">    &#125;</div><div class="line">    func numberOfSections(<span class="keyword">in</span> tableView: <span class="built_in">UITableView</span>) -&gt; Int &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">    func tableView(_ tableView: <span class="built_in">UITableView</span>, numberOfRowsInSection section: Int) -&gt; Int &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">4</span></div><div class="line">    &#125;</div><div class="line">    func tableView(_ tableView: <span class="built_in">UITableView</span>, heightForHeaderInSection section: Int) -&gt; <span class="built_in">CGFloat</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">10</span></div><div class="line">    &#125;</div><div class="line">    func tableView(_ tableView: <span class="built_in">UITableView</span>, heightForFooterInSection section: Int) -&gt; <span class="built_in">CGFloat</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">2</span></div><div class="line">    &#125;</div><div class="line">    func tableView(_ tableView: <span class="built_in">UITableView</span>, cellForRowAt indexPath: IndexPath) -&gt; <span class="built_in">UITableViewCell</span> &#123;</div><div class="line">        let cellID = <span class="string">"cellID"</span></div><div class="line">        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)</div><div class="line">        <span class="keyword">if</span> cell == <span class="literal">nil</span> &#123;</div><div class="line">            cell = <span class="built_in">UITableViewCell</span>(style: .default, reuseIdentifier: cellID)</div><div class="line">        &#125;</div><div class="line">        cell!.textLabel!.text = <span class="string">"cell\(indexPath.row)"</span></div><div class="line">        <span class="keyword">return</span> cell!</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//ScrollView代理，以实现下拉图片放大</span></div><div class="line">    func scrollViewDidScroll(_ scrollView: <span class="built_in">UIScrollView</span>) &#123;</div><div class="line">        let offY = scrollView.contentOffset.y</div><div class="line">        <span class="keyword">if</span> offY &lt; -topImageHeight &#123;</div><div class="line">            topImage?.frame.origin.y = offY</div><div class="line">            topImage?.frame.size.height = -offY </div><div class="line">            myAvatar?.frame.origin.y = -offY - topImageHeight + <span class="number">75</span></div><div class="line">            myNickName?.frame.origin.y = -offY - topImageHeight + <span class="number">157</span></div><div class="line">            myBio?.frame.origin.y = -offY - topImageHeight + <span class="number">175</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        <span class="keyword">super</span>.didReceiveMemoryWarning()</div><div class="line">        <span class="comment">// Dispose of any resources that can be recreated.</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>来看看实现的效果图:<br><img src="http://og7heq3lq.bkt.clouddn.com/EnlargeImage.gif" alt="图片下拉放大"><br><br></p>
 
         
+
         </div>
+        
         <footer class="article-footer">
             <div class="share-container">
 
@@ -207,7 +227,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/" data-id="ciwej0s1w000fz8s25u29hwuh" class="article-share-link"><i class="fa fa-share-alt"></i>分享到</a>
+    <a data-url="http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/" data-id="cj2kenrj4000h1cs25hov76qe" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -255,7 +275,7 @@ var _hmt = _hmt || [];
             $('.article-share-box.on').hide();
 
             box.css({
-                top: offset.top + 23,
+                top: offset.top + 21,
                 left: offset.left
             }).addClass('on');
 
@@ -274,7 +294,7 @@ var _hmt = _hmt || [];
 
             
     
-        <a href="http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/#comments" class="article-comment-link ds-thread-count" data-thread-key="2016/10/26/Swift3.0-PictureDrop-downEnlarge/">评论</a>
+        <a href="http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/">评论</a>
     
 
         </footer>
@@ -282,6 +302,15 @@ var _hmt = _hmt || [];
     
         
 <nav id="article-nav">
+    
+        <a href="/2016/11/01/Swift3.0-MJRefreshSimpleTest/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Swift3.0 MJRefresh 的简单使用
+                
+            </div>
+        </a>
     
     
         <a href="/2016/10/24/Swift3.0-tabbarShadow/" id="article-nav-older" class="article-nav-link-wrap">
@@ -296,84 +325,17 @@ var _hmt = _hmt || [];
 </article>
 
 
-    
+
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/10/26/Swift3.0-PictureDrop-downEnlarge/" data-title="Swift3.0 顶部图片下拉放大" data-url="http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/"></div>
-    <style>
-        #ds-thread #ds-reset .ds-textarea-wrapper {
-            background: none;
-        }
-        #ds-reset .ds-avatar img {
-            box-shadow: none;
-        }
-        #ds-reset .ds-gradient-bg {
-            background: #f7f7f7;
-        }
-        #ds-thread #ds-reset li.ds-tab a {
-            border-radius: 5px;
-        }
-        #ds-thread #ds-reset .ds-post-button {
-            color: white;
-            border: none;
-            box-shadow: none;
-            background: #d32;
-            text-shadow: none;
-            font-weight: normal;
-            font-family: 'Microsoft Yahei';
-        }
-        #ds-thread #ds-reset .ds-post-button:hover {
-            color: white;
-            background: #DE594C;
-        }
-        #ds-thread #ds-reset .ds-post-button:active {
-            background: #d32;
-        }
-        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
-            color: white;
-            background: #d32;
-            box-shadow: none;
-            text-shadow: none;
-            font-weight: normal;
-        }
-    </style>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
     
     </section>
-
-<style>
-    @media screen and (min-width: 1200px) {
-      #profile{
-        display:none;
-      }
-    }
-    @media screen and (min-width: 1200px) {
-      #main {
-        position: relative;
-        left: 5%;
-        width: 90%;
-      }
-      .article-title{
-        text-align:center;
-      }
-    }
-    @media screen and (min-width: 560px) and (max-width: 799px) {
-      .article-title{
-        text-align:center;
-      }
-    }
-    @media screen and (max-width: 559px) {
-      .article-title{
-        text-align:center;
-      }
-    }
-    @media screen and (min-width: 800px) and (max-width: 1199px) {
-      .article-title{
-        text-align:center;
-      }
-    }
-</style>
+    
 
 
 </section>
@@ -384,19 +346,19 @@ var _hmt = _hmt || [];
     <div class="inner profile-inner">
         <div class="base-info profile-block">
             <img id="avatar" src="/css/images/my.jpg" />
-            <h2 id="name">FOUR</i></h2>
+            <h2 id="name">FOUR</h2>
             <h3 id="title">旅行者 &amp; 开发者<br>我是一个梦想有一天和 Tardis 去旅行的地球人。</h3>
-            <span id="location"><i class="fa fa-map-marker"></i>Huizhou, China</span>
-            <a id="follow" target="_blank" href="https://github.com/Agent-4">关 注 我</a>
+            <span id="location"><a href="http://apis.map.qq.com/tools/poimarker?type=0&marker=coord:23.092,114.400;title:惠州;addr:惠州西湖|coord:23.092,114.400&key=3SFBZ-OABK3-2QH3M-YGTD5-7Z5M5-TQFM2&referer=FOUR's Time and Space" target="_blank"><i class="fa fa-map-marker"></i>Huizhou, China</a></span>
+            <a id="follow" target="_blank" href="https://coding.net/u/four4/">关 注 我</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                <a href="/archives">11
+                <a href="/archives">14
                     <span>文章</span>
                 </a>
             </div>
             <div class="article-info-block">
-                <a href="/tags">7
+                <a href="/tags">9
                     <span>标签</span>
                 </a>
             </div>
@@ -406,36 +368,105 @@ var _hmt = _hmt || [];
             <table>
                 <tr>
                     
-                    
                     <td>
-                        <a href="http://weibo.com/2082699421" target="_blank" id="My Weibo" class=tooltip>
-                            <i><img src="/css/images/Weibo.png" /></i>
-                        </a>
+                        
+                            <button class="social_link">
+                            <a href="http://weibo.com/2082699421" class="TheWeibo" target="_blank" tooltip="My Weibo" >
+                            <img src="/css/images/Weibo.png" />
+                            </a>
+                            </button>
+                        
                     </td>
                     
                     <td>
-                        <a href="http://7xsjrr.com1.z0.glb.clouddn.com/WeChat.jpg" target="_blank" id="My Wechat" class=tooltip>
-                            <i><img src="/css/images/Wechat.png" /></i>
-                        </a>
+                        
+                            <button class="md-trigger social_link" data-modal="modal-Wechat" >
+                            <a class="TheWechat" tooltip="My Wechat" >
+                            <img src="/css/images/Wechat.png" /></a>
+                            </button>
+                        
                     </td>
                     
                     <td>
-                        <a href="http://user.qzone.qq.com/1028594899" target="_blank" id="My QQ：1028594899" class=tooltip>
-                            <i><img src="/css/images/QQ：1028594899.png" /></i>
-                        </a>
+                        
+                            <button class="md-trigger social_link" data-modal="modal-QQ" >
+                            <a class="TheQQ" tooltip="My QQ" >
+                            <img src="/css/images/QQ.png" /></a>
+                            </button>
+                        
                     </td>
                     
                     <td>
-                        <a href="https://github.com/Agent-4" target="_blank" id="My Github" class=tooltip>
-                            <i><img src="/css/images/Github.png" /></i>
-                        </a>
+                        
+                            <button class="social_link">
+                            <a href="https://github.com/Agent-4" class="TheGithub" target="_blank" tooltip="My Github" >
+                            <img src="/css/images/Github.png" />
+                            </a>
+                            </button>
+                        
                     </td>
                     
                 </tr>
             </table>
+            <div class="md-modal1 md-effect-10" id="modal-Wechat">
+                <div class="md-content">
+                    <h3 class="title">Add Me On <i class="fa fa-weixin" aria-hidden="true"></i></h3>
+                    <div>
+                        <img src="/css/images/MyQRCode.jpg" /><br>
+                        <span>WeChat ID : moxiaohao-4</span>
+                        <br><br>
+                        <button class="md-close wechat-close">关闭</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal1 md-effect-10" id="modal-QQ">
+                <div class="md-content">
+                    <h3 class="title2">Add Me On <i class="fa fa-qq" aria-hidden="true"></i></h3>
+                    <div>
+                        <img src="/css/images/QQ_QR_Code.jpg" /><br>
+                        <span>QQ Number : 1028594899</span>
+                        <br><br>
+                        <button class="md-close qq-close">关闭</button>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </div>
+    <br>
+    <section class="intro animate-rotate-1">         
+        <h1 class="ah-headline">
+            <span></span>
+            <span class="ah-words-wrapper">
+                <b class="is-visible">Happy Coding ....</b>
+                <b>Write The Code ....</b>
+                <b>Change The World！</b>
+            </span>
+        </h1>
+    </section>
+    <script>
+    $(function() {
+        $('.animate-rotate-1').animatedHeadline({
+            animationType: 'rotate-1'
+        });
+    });
+    </script>
+    <button class="md-trigger md-Code TheCoding" data-modal="modal-4"><canvas id="secretCode" class="secretCode"></canvas></button>
+    <div class="md-modal md-effect-4" id="modal-4">
+            <div class="md-content">
+                <h3>Happy Coding <i class="fa fa-smile-o" aria-hidden="true"></i></h3>
+                <div>
+                    <p><i class="fa fa-code" aria-hidden="true"></i> The secret name. If you want to know, just crack it and ask me the name is right or not ! <i class="fa fa-code" aria-hidden="true"></i></p>
+                    <ul>
+                        <li><strong>Secret Code 1 : </strong> 0100 0111 0100 0001 0100 1111 </li>
+                        <li><strong>Secret Code 2 : </strong> 0100 1010 0100 1001 0100 0101</li>
+                    </ul>
+                    <button class="md-close">关闭</button>
+                </div>
+            </div>
+    </div>
+    <script src="/js/classie.js"></script>
+    <script src="/js/modalEffects.js"></script>
     <br>
     <div class="widget-music">
         <img src="http://og7heq3lq.bkt.clouddn.com/musicline.jpg" width="100%" height="40px" />
@@ -451,7 +482,7 @@ var _hmt = _hmt || [];
             
                 <a href="http://music.163.com/#/song?id=28923579" target="_blank" >03. Fire—Gavin Degraw</a>
             
-                <a href="http://play.baidu.com/?__m=mboxCtrl.playSong&__a=243155881#" target="_blank" >04. 小幸运—田馥甄</a>
+                <a href="http://www.xiami.com/song/1774490672" target="_blank" >04. 小幸运—田馥甄</a>
             
                 <a href="http://www.xiami.com/song/1773313987?spm=0.0.0.0.9S4idl" target="_blank" >05. 平凡相依—丁当</a>
             
@@ -530,30 +561,26 @@ var _hmt = _hmt || [];
     </div>
 
     <div class="recent-comments">
-    <div class="recent-comments-title">
-        <img src="/css/images/comment.png" /> 最新评论：
+        <div class="commentsImg" >
+            <img src="http://og7heq3lq.bkt.clouddn.com/comments.jpg" width="100%" height="40px" />
+        </div>
+        <div class="recent-comments-title">
+            <img src="/css/images/comment.png" /> 最新评论：<span> （翻墙才显示哦！）</span>
+        </div>
+        <!-- 评论 start 
+        <div class="ds-recent-comments" data-num-items="10" data-show-avatars="1" data-show-time="1" data-show-title="0" data-show-admin="1" data-excerpt-length="70"></div>
+         评论 end -->
+        <div id="recent comments" class="dsq-widget">
+            <script type="text/javascript" src="http://moxiaohao.disqus.com/recent_comments_widget.js?num_items=10&hide_avatars=0&avatar_size=32&excerpt_length=100&hide_mods=0"></script>
+                
+        </div>  
     </div>
-    <!-- 评论 start -->
-    <div class="ds-recent-comments" data-num-items="10" data-show-avatars="1" data-show-time="1" data-show-title="0" data-show-admin="1" data-excerpt-length="70"></div>
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"agentfour"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-        </script>
-    <!-- 评论 end -->
-    </div>
-
+    
     <div class="widget-wrap widget-list">
         <div class="container4">
-            <section id="progressbar-slider" class="sample slider--animated" data-slidizle data-slidizle-loop="true" data-slidizle-timeout="4000" data-slidizle-pause-on-hover="true">
+            <section id="progressbar-slider" class="sample slider-animated" data-slidizle data-slidizle-loop="true" data-slidizle-timeout="4000" data-slidizle-pause-on-hover="true">
                 <ul class="slider-content" data-slidizle-content>
-                    <li><a href="#" target="_blank"><img src="http://og7heq3lq.bkt.clouddn.com/sonic.jpg" width="100%" height="100px" /></a></li>
+                    <li><img src="http://og7heq3lq.bkt.clouddn.com/sonic.jpg" width="100%" height="100px" /></a></li>
                     <li><img src="http://og7heq3lq.bkt.clouddn.com/weepingangel.jpg" width="100%" height="100px" /></li>
                     <li><img src="http://og7heq3lq.bkt.clouddn.com/clara.jpg" width="100%" height="100px" /></li>
                     <li><img src="http://og7heq3lq.bkt.clouddn.com/dw4.jpg" width="100%" height="100px" /></li>
@@ -581,18 +608,23 @@ var _hmt = _hmt || [];
                     </li>
                 
                     <li>
+                        <a href="https://leancloud.cn/" target="_blank" >LeanCloud</a>
+                    </li>
+                
+                    <li>
                         <a href="https://hexo.io/zh-cn/" target="_blank" >Hexo</a>
                     </li>
                 
                     <li>
-                        <a href="http://www.huachuanxueyuan.com/" target="_blank" >花川学院</a>
+                        <a href="http://chuangzaoshi.com/" target="_blank" >创造狮</a>
                     </li>
                 
             </ul>
         </div>
     </div>
+    
 </aside>
-<script src="/js/jquery_slidizle.js"></script>
+<script src="/js/jquery.slidizle.js"></script>
 <script>
     jQuery(function($) {
         $('[data-slidizle]').slidizle(); // setup slidizle
@@ -622,34 +654,38 @@ var _hmt = _hmt || [];
 </script>
             
         </div>
+        <script id="dsq-count-scr" src="//moxiaohao.disqus.com/count.js" async></script>
         <script asyns src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy;2016 FOUR4<br>
-            Design by <a href="https://github.com/Agent-4" target="_blank">FOUR4</a> | <span id="busuanzi_container_site_uv">Total visits <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> times</span><br>
-            <span class="Tips"><i class="fa fa-tencent-weibo"></i> We're all stories in th end.  Just make it a good one, eh?</span>
+           &copy; 2017 FOUR4<br>
+            Design by <a href="https://coding.net/u/four4" target="_blank">FOUR4</a> | <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> Views</span><br>
+            <span class="Tips"><i class="fa fa-heart" aria-hidden="true"></i> We're all stories in th end.  Just make it a good one, eh ?</span>
         </div>
     </div>
 </footer>
         
     
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'agentfour'};
-    (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://moxiaohao.gq/2016/10/26/Swift3.0-PictureDrop-downEnlarge/';
+        
+        this.page.identifier = 'Swift3.0-PictureDrop-downEnlarge';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'moxiaohao' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
+</script>
 
 
 
     
-        <script src="/other/fancybox/jquery_fancybox_pack.js"></script>
+        <script src="/lib/fancybox/jquery_fancybox_pack.js"></script>
     
 
 <!-- Custom Scripts -->
@@ -664,6 +700,5 @@ var _hmt = _hmt || [];
                   $(this).scrollTop()>550?$(".totop").css("display","block"):$(".totop").hide()
             })
       </script>
-
 </body>
 </html>

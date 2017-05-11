@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="B3OjEgnk7h" />
+    <meta name="google-site-verification" content="ZlH-4PWam9R5XW1N7SSejKOQs6fUgQOutZgYL2Vohhg" />
+    
+    <title>iOS 实现快速切换主题颜色 | FOUR's Time and Space</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="主题颜色非常熟悉，许多 App 都是可以自定义主题颜色的，给 App 添加自定义主题颜色功能，可以给用户一个良好的选择，一方面也能很好地留住用户。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 实现快速切换主题颜色">
+<meta property="og:url" content="http://moxiaohao.gq/2016/11/08/iOS-ThemeColor/index.html">
+<meta property="og:site_name" content="FOUR">
+<meta property="og:description" content="主题颜色非常熟悉，许多 App 都是可以自定义主题颜色的，给 App 添加自定义主题颜色功能，可以给用户一个良好的选择，一方面也能很好地留住用户。">
+<meta property="og:image" content="http://7xsjfr.com1.z0.glb.clouddn.com/skin.png">
+<meta property="og:updated_time" content="2017-05-10T16:42:00.545Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 实现快速切换主题颜色">
+<meta name="twitter:description" content="主题颜色非常熟悉，许多 App 都是可以自定义主题颜色的，给 App 添加自定义主题颜色功能，可以给用户一个良好的选择，一方面也能很好地留住用户。">
+<meta name="twitter:image" content="http://7xsjfr.com1.z0.glb.clouddn.com/skin.png">
+    
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/open-sans/styles.css">
+    <link rel="stylesheet" href="/lib/source-code-pro/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/slidizle.css"/>
+    <script src="/lib/jquery.min.js"></script>
+    
+    <link href="/lib/fancybox/jquery_fancybox.css"" rel="stylesheet">
+    
+        <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?ef23a36cc17973cdc1bbe45f1b4e118d";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+    
+
+        <style>
+            @media screen and (min-width: 1200px) {
+                  #main {
+                    position: relative;
+                    left: 5%;
+                    width: 90%;
+                  }
+                  #profile{
+                    display:none;
+                  }
+            }
+            .article-title{
+                text-align:center;
+            }
+        </style>
+    
+</head>
+<body>
+    <!--<div id="particles-js"></div>
+    <script src="/js/particles.js"></script>-->
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <a class="site-title" href="/" data-cont="FOUR">FOUR</a>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">主页</a>
+                
+                    <a class="main-nav-link" href="/archives">时间线</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/albums">相册</a>
+                
+                    <a class="main-nav-link" href="/about">关于我</a>
+                
+                    <a class="main-nav-link" href="/message">留言</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/my.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="站内搜索...." />
+        <img class="search-form-four" src="/css/images/search.png" />
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><img src="/css/images/close.png" /></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">主页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">时间线</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/albums">相册</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于我</a></td>
+                
+                    <td><a class="main-nav-link" href="/message">留言</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="站内搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            <section id="main"><article id="post-iOS-ThemeColor" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            iOS 实现快速切换主题颜色
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+    	
+    		<i class="fa fa-calendar fa-lg"></i>
+	        <a href="/2016/11/08/iOS-ThemeColor/">
+	            <time datetime="2016-11-07T16:00:00.000Z" itemprop="datePublished">2016-11-08</time>
+	        </a>
+        
+    </div>
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder-open fa-lg"></i>
+        <a class="article-category-link" href="/categories/Objective-C/">Objective-C</a>
+    </div>
+
+                    
+    <div class="article-tag">
+       <i class="fa fa-tags fa-lg"></i>
+        <a class="tag-link" href="/tags/ThemeColor/">ThemeColor</a>
+    </div>
+
+                </div>
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <p>主题颜色非常熟悉，许多 App 都是可以自定义主题颜色的，给 App 添加自定义主题颜色功能，可以给用户一个良好的选择，一方面也能很好地留住用户。<br><a id="more"></a></p>
+<p>这里给大家推荐一款简单而实用的主题更换第三方库 <strong>PYTheme</strong></p>
+<p>Github地址：<a href="https://github.com/iphone5solo/PYTheme" target="_blank" rel="external">https://github.com/iphone5solo/PYTheme</a></p>
+<p style="text-align:center"><img src="http://7xsjfr.com1.z0.glb.clouddn.com/skin.png" style="display:inline;width:200px;margin:0 10px"><img src="http://og7heq3lq.bkt.clouddn.com/PYThemeDemo.gif" style="display:inline;width:200px;margin:0 10px"></p>
+
+<p><strong>PYTheme</strong> 有很好的特性：</p>
+<ul>
+<li>轻量级</li>
+<li>低耦合</li>
+<li>自动管理内存</li>
+<li>支持动态更换主题颜色</li>
+<li>支持动态更换主题图片</li>
+<li>支持 CocoaPods</li>
+</ul>
+<p>使用起来也非常的简单，容易理解。设置主题颜色的时候可以根据各种需要不同控件等来选择各种设定方法；<br>设定方法可以：</p>
+<ul>
+<li>直接通过属性</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 按钮的背景色添加到主题色池中</span></div><div class="line">[button py_addToThemeColorPool:<span class="string">@"backgroundColor"</span>];</div></pre></td></tr></table></figure>
+<ul>
+<li>通过设置方法并且传入方法对应参数数组，参数中直接含有颜色参数</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 设置按钮选中时字体颜色添加到主题色池中</span></div><div class="line">[button py_addToThemeColorPoolWithSelector:<span class="keyword">@selector</span>(setTitleColor:forState:) </div><div class="line">						objects:@[PYTHEME_THEME_COLOR, @(<span class="built_in">UIControlStateSelected</span>)]];</div></pre></td></tr></table></figure>
+<ul>
+<li>当方法参数中没有直接包含颜色参数，而是经过包装（如使用NSDictionary包装）</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 设置tabBar选中时字体颜色添加到主题色池中</span></div><div class="line"><span class="built_in">NSMutableDictionary</span> *attrSel = [<span class="built_in">NSMutableDictionary</span> dictionary];</div><div class="line">    attrSel[<span class="built_in">NSForegroundColorAttributeName</span>] = PYTHEME_THEME_COLOR;</div><div class="line">    [childController.tabBarItem py_addToThemeColorPoolWithSelector:<span class="keyword">@selector</span>(setTitleTextAttributes:forState:) </div><div class="line">    								objects:@[attrSel, @(<span class="built_in">UIControlStateSelected</span>)]];</div></pre></td></tr></table></figure>
+<p>设置主题色<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 设置主题色为红色</span></div><div class="line">[<span class="keyword">self</span> py_setThemeColor:[<span class="built_in">UIColor</span> redColor]];</div></pre></td></tr></table></figure></p>
+<p>更多介绍请在作者 Github 中查看.<br><br></p>
+
+        
+
+        </div>
+        
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://moxiaohao.gq/2016/11/08/iOS-ThemeColor/" data-id="cj2kenrk1000v1cs2324y7wo5" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<div class="article-share-links">',
+                            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到微博"><img src="/css/images/Weibo.png" /></a>',
+                            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ空间"><img src="/css/images/QQZone.png" /></a>',
+                            '<a href="http://v.t.qq.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ微博"><img src="/css/images/QQWeibo.png" /></a>',
+                            '<a href="#" class="article-share-icons" title="分享到微信（暂时不能分享）"><img src="/css/images/Wechat.png" /></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 21,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://moxiaohao.gq/2016/11/08/iOS-ThemeColor/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://moxiaohao.gq/2016/11/08/iOS-ThemeColor/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/11/04/Swift3.0-SimpleCodedClock/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Swift3.0 简单数字密码锁</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+    
+
+
+</section>
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/my.jpg" />
+            <h2 id="name">FOUR</h2>
+            <h3 id="title">旅行者 &amp; 开发者<br>我是一个梦想有一天和 Tardis 去旅行的地球人。</h3>
+            <span id="location"><a href="http://apis.map.qq.com/tools/poimarker?type=0&marker=coord:23.092,114.400;title:惠州;addr:惠州西湖|coord:23.092,114.400&key=3SFBZ-OABK3-2QH3M-YGTD5-7Z5M5-TQFM2&referer=FOUR's Time and Space" target="_blank"><i class="fa fa-map-marker"></i>Huizhou, China</a></span>
+            <a id="follow" target="_blank" href="https://coding.net/u/four4/">关 注 我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                <a href="/archives">14
+                    <span>文章</span>
+                </a>
+            </div>
+            <div class="article-info-block">
+                <a href="/tags">9
+                    <span>标签</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    <td>
+                        
+                            <button class="social_link">
+                            <a href="http://weibo.com/2082699421" class="TheWeibo" target="_blank" tooltip="My Weibo" >
+                            <img src="/css/images/Weibo.png" />
+                            </a>
+                            </button>
+                        
+                    </td>
+                    
+                    <td>
+                        
+                            <button class="md-trigger social_link" data-modal="modal-Wechat" >
+                            <a class="TheWechat" tooltip="My Wechat" >
+                            <img src="/css/images/Wechat.png" /></a>
+                            </button>
+                        
+                    </td>
+                    
+                    <td>
+                        
+                            <button class="md-trigger social_link" data-modal="modal-QQ" >
+                            <a class="TheQQ" tooltip="My QQ" >
+                            <img src="/css/images/QQ.png" /></a>
+                            </button>
+                        
+                    </td>
+                    
+                    <td>
+                        
+                            <button class="social_link">
+                            <a href="https://github.com/Agent-4" class="TheGithub" target="_blank" tooltip="My Github" >
+                            <img src="/css/images/Github.png" />
+                            </a>
+                            </button>
+                        
+                    </td>
+                    
+                </tr>
+            </table>
+            <div class="md-modal1 md-effect-10" id="modal-Wechat">
+                <div class="md-content">
+                    <h3 class="title">Add Me On <i class="fa fa-weixin" aria-hidden="true"></i></h3>
+                    <div>
+                        <img src="/css/images/MyQRCode.jpg" /><br>
+                        <span>WeChat ID : moxiaohao-4</span>
+                        <br><br>
+                        <button class="md-close wechat-close">关闭</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal1 md-effect-10" id="modal-QQ">
+                <div class="md-content">
+                    <h3 class="title2">Add Me On <i class="fa fa-qq" aria-hidden="true"></i></h3>
+                    <div>
+                        <img src="/css/images/QQ_QR_Code.jpg" /><br>
+                        <span>QQ Number : 1028594899</span>
+                        <br><br>
+                        <button class="md-close qq-close">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <br>
+    <section class="intro animate-rotate-1">         
+        <h1 class="ah-headline">
+            <span></span>
+            <span class="ah-words-wrapper">
+                <b class="is-visible">Happy Coding ....</b>
+                <b>Write The Code ....</b>
+                <b>Change The World！</b>
+            </span>
+        </h1>
+    </section>
+    <script>
+    $(function() {
+        $('.animate-rotate-1').animatedHeadline({
+            animationType: 'rotate-1'
+        });
+    });
+    </script>
+    <button class="md-trigger md-Code TheCoding" data-modal="modal-4"><canvas id="secretCode" class="secretCode"></canvas></button>
+    <div class="md-modal md-effect-4" id="modal-4">
+            <div class="md-content">
+                <h3>Happy Coding <i class="fa fa-smile-o" aria-hidden="true"></i></h3>
+                <div>
+                    <p><i class="fa fa-code" aria-hidden="true"></i> The secret name. If you want to know, just crack it and ask me the name is right or not ! <i class="fa fa-code" aria-hidden="true"></i></p>
+                    <ul>
+                        <li><strong>Secret Code 1 : </strong> 0100 0111 0100 0001 0100 1111 </li>
+                        <li><strong>Secret Code 2 : </strong> 0100 1010 0100 1001 0100 0101</li>
+                    </ul>
+                    <button class="md-close">关闭</button>
+                </div>
+            </div>
+    </div>
+    <script src="/js/classie.js"></script>
+    <script src="/js/modalEffects.js"></script>
+    <br>
+    <div class="widget-music">
+        <img src="http://og7heq3lq.bkt.clouddn.com/musicline.jpg" width="100%" height="40px" />
+        <h3 class="music-title">
+            <img class="img_music" src="/css/images/music.png" /> 听一下音乐：<span> （FROM 网易云音乐）</span>
+        </h3>
+        <div class="music-lists">
+            <div id="music-list1">
+            
+                <a href="http://music.163.com/#/song?id=32046185" target="_blank" >01. 那么骄傲—周玥&amp;徐薇</a>
+            
+                <a href="http://music.163.com/#/song?id=86360" target="_blank" >02. 忘记时间—胡歌</a>
+            
+                <a href="http://music.163.com/#/song?id=28923579" target="_blank" >03. Fire—Gavin Degraw</a>
+            
+                <a href="http://www.xiami.com/song/1774490672" target="_blank" >04. 小幸运—田馥甄</a>
+            
+                <a href="http://www.xiami.com/song/1773313987?spm=0.0.0.0.9S4idl" target="_blank" >05. 平凡相依—丁当</a>
+            
+                <a href="http://music.163.com/#/song?id=25706282" target="_blank" >06. 夜空中最亮的星—逃跑计划</a>
+            
+                <a href="http://music.163.com/#/song?id=29947326" target="_blank" >07. 何以爱情—钟汉良</a>
+            
+                <a href="http://music.163.com/#/song?id=368803" target="_blank" >08. 如果明天—牛奶咖啡</a>
+            
+            </div>
+            <div id="music-list2">
+            
+                <a href="http://music.163.com/#/song?id=28378127" target="_blank" >09. Undo—Sanna Nielsen</a>
+            
+                <a href="http://music.163.com/#/song?id=30039638" target="_blank" >10. 孤独的总和—吴汶芳</a>
+            
+                <a href="http://music.163.com/#/song?id=5243367" target="_blank" >11. 下雨天—南拳妈妈</a>
+            
+                <a href="http://music.163.com/#/song?id=368760" target="_blank" >12. 你不像她—南拳妈妈</a>
+            
+                <a href="http://music.163.com/#/song?id=191046" target="_blank" >13. 无赖—郑中基</a>
+            
+                <a href="http://music.163.com/#/song?id=66842" target="_blank" >14. 十年—陈奕迅</a>
+            
+                <a href="http://music.163.com/#/song?id=65099" target="_blank" >15. 爱情转移—陈奕迅</a>
+            
+                <a href="http://music.163.com/#/song?id=64886" target="_blank" >16. 浮夸—陈奕迅</a>
+            
+            </div>
+            <div id="music-list3">
+            
+                <a href="http://music.163.com/#/song?id=25730757" target="_blank" >17. 稳稳的幸福—陈奕迅</a>
+            
+                <a href="http://music.163.com/#/song?id=86477" target="_blank" >18. 爱得太迟—古巨基</a>
+            
+                <a href="http://music.163.com/#/song?id=25718007" target="_blank" >19. 你瞒我瞒—陈怕宇</a>
+            
+                <a href="http://music.163.com/#/song?id=156846" target="_blank" >20. 不浪漫罪名—王杰</a>
+            
+                <a href="http://music.163.com/#/song?id=89690" target="_blank" >21. 眼红馆—关智斌</a>
+            
+                <a href="http://music.163.com/#/song?id=30398306" target="_blank" >22. 换个他—沈震轩</a>
+            
+                <a href="http://music.163.com/#/song?id=113326" target="_blank" >23. 爱不疚—林峯</a>
+            
+                <a href="http://music.163.com/#/song?id=22813728" target="_blank" >24. Nobody—Wonder Girls</a>
+            
+            </div>
+            <div id="music-list4">
+            
+                <a href="http://music.163.com/#/song?id=5260494" target="_blank" >25. 一直很安静—阿桑</a>
+            
+                <a href="http://music.163.com/#/song?id=28793502" target="_blank" >26. 后会无期—G.E.M.邓紫棋</a>
+            
+                <a href="http://music.163.com/#/song?id=26113988" target="_blank" >27. 泡沫—G.E.M.邓紫棋</a>
+            
+                <a href="http://music.163.com/#/song?id=29750099" target="_blank" >28. 平凡之路—朴树</a>
+            
+                <a href="http://music.163.com/#/song?id=34324638" target="_blank" >29. 夏天协奏曲—林逸欣</a>
+            
+                <a href="http://c.y.qq.com/v8/playsong.html?songid=1658153&source=yqq#wechat_redirect" target="_blank" >30. 习惯—林逸欣</a>
+            
+                <a href="http://music.163.com/#/song?id=317908" target="_blank" >31. 我知道—阎韦伶</a>
+            
+                <a href="http://music.163.com/#/song?id=2871217" target="_blank" >32. Firework—Katy Perry</a>
+            
+            </div>
+        </div>
+        <hr>
+        <div class="music-lists-pages">
+            <a id="music-list1-page" onmouseover="page1()" >1</a>
+            <a id="music-list2-page" onmouseover="page2()" >2</a>
+            <a id="music-list3-page" onmouseover="page3()" >3</a>
+            <a id="music-list4-page" onmouseover="page4()" >4</a>
+        </div>
+    </div>
+
+    <div class="recent-comments">
+        <div class="commentsImg" >
+            <img src="http://og7heq3lq.bkt.clouddn.com/comments.jpg" width="100%" height="40px" />
+        </div>
+        <div class="recent-comments-title">
+            <img src="/css/images/comment.png" /> 最新评论：<span> （翻墙才显示哦！）</span>
+        </div>
+        <!-- 评论 start 
+        <div class="ds-recent-comments" data-num-items="10" data-show-avatars="1" data-show-time="1" data-show-title="0" data-show-admin="1" data-excerpt-length="70"></div>
+         评论 end -->
+        <div id="recent comments" class="dsq-widget">
+            <script type="text/javascript" src="http://moxiaohao.disqus.com/recent_comments_widget.js?num_items=10&hide_avatars=0&avatar_size=32&excerpt_length=100&hide_mods=0"></script>
+                
+        </div>  
+    </div>
+    
+    <div class="widget-wrap widget-list">
+        <div class="container4">
+            <section id="progressbar-slider" class="sample slider-animated" data-slidizle data-slidizle-loop="true" data-slidizle-timeout="4000" data-slidizle-pause-on-hover="true">
+                <ul class="slider-content" data-slidizle-content>
+                    <li><img src="http://og7heq3lq.bkt.clouddn.com/sonic.jpg" width="100%" height="100px" /></a></li>
+                    <li><img src="http://og7heq3lq.bkt.clouddn.com/weepingangel.jpg" width="100%" height="100px" /></li>
+                    <li><img src="http://og7heq3lq.bkt.clouddn.com/clara.jpg" width="100%" height="100px" /></li>
+                    <li><img src="http://og7heq3lq.bkt.clouddn.com/dw4.jpg" width="100%" height="100px" /></li>
+                    <li><img src="http://og7heq3lq.bkt.clouddn.com/little-amy.jpg" width="100%" height="100px" /></li>
+                    <li><img src="http://og7heq3lq.bkt.clouddn.com/ool.jpg" width="100%" height="100px" /></li>
+                </ul>
+                <div class="slider-progressbar"></div>
+                <ul class="slider-navigation" data-slidizle-navigation></ul>
+            </section>
+        </div>
+        <h3 class="widget-title"><img class="imglink" src="/css/images/link.png" /> 友情链接 ：<span> （交换友链吧！｡◕‿◕｡）</span></h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://coding.net" target="_blank" >Coding</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://darielchen.github.io/SwiftManual/" target="_blank" >Swift3.0语法速查手册</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://realm.io/cn/" target="_blank" >Realm</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://leancloud.cn/" target="_blank" >LeanCloud</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://hexo.io/zh-cn/" target="_blank" >Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://chuangzaoshi.com/" target="_blank" >创造狮</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+</aside>
+<script src="/js/jquery.slidizle.js"></script>
+<script>
+    jQuery(function($) {
+        $('[data-slidizle]').slidizle(); // setup slidizle
+    });
+</script>
+<script>
+    jQuery(function($) {
+        var $slider = $('#progressbar-slider');
+        // $slider.slidizle();
+        var $progressbar = $slider.find('.slider-progressbar');
+            api = $slider.data('slidizle_api');
+        $slider.bind('slidizle.change', function(e, api) {
+            $progressbar.stop().css('width', 0);
+        });
+        $slider.bind('slidizle.pause', function(e, api) {
+            $progressbar.stop();
+        });
+        $slider.bind('slidizle.play slidizle.resume slidizle.change', function(e, api) {
+            // do nothing is is hover
+            if (api.isHover()) return;
+            // manage progressbar :
+            $progressbar.animate({
+                width : '100%'
+            }, api.getRemainingTimeout());
+        });
+    });
+</script>
+            
+        </div>
+        <script id="dsq-count-scr" src="//moxiaohao.disqus.com/count.js" async></script>
+        <script asyns src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+           &copy; 2017 FOUR4<br>
+            Design by <a href="https://coding.net/u/four4" target="_blank">FOUR4</a> | <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> Views</span><br>
+            <span class="Tips"><i class="fa fa-heart" aria-hidden="true"></i> We're all stories in th end.  Just make it a good one, eh ?</span>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://moxiaohao.gq/2016/11/08/iOS-ThemeColor/';
+        
+        this.page.identifier = 'iOS-ThemeColor';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'moxiaohao' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/lib/fancybox/jquery_fancybox_pack.js"></script>
+    
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+    </div>
+    <!--返回顶部 javascript:scroll(0,0)-->
+      <div class="tothetop">
+            <a class="totop" href="javascript:scroll(0,0)" title="回到顶部"><i class="fa fa-arrow-up fa-lg"></i></a>
+      </div>
+      <script type="text/javascript">
+            $(window).scroll(function(){
+                  $(this).scrollTop()>550?$(".totop").css("display","block"):$(".totop").hide()
+            })
+      </script>
+</body>
+</html>
