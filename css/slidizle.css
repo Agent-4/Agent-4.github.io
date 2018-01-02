@@ -291,6 +291,9 @@
       color:#565a5f;
       line-height:1.7em;
     }
+    .p_details {
+      padding-bottom: 15px;
+    }
     .skills{
       margin:0;
     }
