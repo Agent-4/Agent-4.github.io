@@ -259,7 +259,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/11/08/iOS-ThemeColor/" data-id="cjbx7twmg000v80s2bvpqe5vo" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/11/08/iOS-ThemeColor/" data-id="cjc23w3si000q3ks2y7sothhh" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -326,8 +326,6 @@
 
             
     
-        <a href="http://moxiaohao.com/2016/11/08/iOS-ThemeColor/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://moxiaohao.com/2016/11/08/iOS-ThemeColor/">评论</a>
-    
 
         </footer>
     </div>
@@ -352,9 +350,21 @@
     <section id="comments">
     
         
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+    <div id="myComment"></div> 
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script>
+            new Valine({
+                el: '#myComment',
+                notify:false, 
+                verify:false, 
+                appId: 'FNWm149sL8ED6b1ooGeP0aP4-gzGzoHsz',
+                appKey: 'F2xuu1EO8U7U6Mp013fj0uY4',
+                placeholder: '评论一下吧！可直接评论！',
+                path:window.location.pathname, 
+                avatar:'mm' 
+            })
+    </script>
 
     
     </section>
@@ -583,7 +593,7 @@
         </div>
     </div>
 
-    <div class="recent-comments">
+    <!--<div class="recent-comments">
         <div class="commentsImg" >
             <img src="http://og7heq3lq.bkt.clouddn.com/comments.jpg" width="100%" height="40px" />
         </div>
@@ -593,11 +603,11 @@
         <!-- 评论 start 
         <div class="ds-recent-comments" data-num-items="10" data-show-avatars="1" data-show-time="1" data-show-title="0" data-show-admin="1" data-excerpt-length="70"></div>
          评论 end -->
-        <div id="recent comments" class="dsq-widget">
+        <!--<div id="recent comments" class="dsq-widget">
             <script type="text/javascript" src="http://moxiaohao.disqus.com/recent_comments_widget.js?num_items=10&hide_avatars=0&avatar_size=32&excerpt_length=100&hide_mods=0"></script>
                 
-        </div>  
-    </div>
+        </div>
+    </div> -->
     
     <div class="widget-wrap widget-list">
         <div class="container4">
@@ -677,7 +687,6 @@
 </script>
             
         </div>
-        <script id="dsq-count-scr" src="//moxiaohao.disqus.com/count.js" async></script>
         <script asyns src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <footer id="footer">
     <div class="outer">
@@ -689,23 +698,6 @@
     </div>
 </footer>
         
-    
-    <script>
-    var disqus_config = function () {
-        
-            this.page.url = 'http://moxiaohao.com/2016/11/08/iOS-ThemeColor/';
-        
-        this.page.identifier = 'iOS-ThemeColor';
-    };
-    (function() { 
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'moxiaohao' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-
-
 
     
         <script src="/lib/fancybox/jquery_fancybox_pack.js"></script>
