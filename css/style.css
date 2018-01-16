@@ -757,7 +757,7 @@ code {
 }
 #profile .inner .base-info #avatar {
   display: block;
-  margin: 10px auto 20px;
+  margin: 10px auto 15px;
   width: 120px;
   height: 120px;
   -webkit-border-radius: 50%;
@@ -765,6 +765,7 @@ code {
 }
 #profile .inner .base-info #name,
 #profile .inner .base-info #title,
+#profile .inner .base-info #title_more,
 #profile .inner .base-info #location {
   display: block;
   text-align: center;
@@ -772,6 +773,7 @@ code {
 #profile .inner .base-info #name {
   font-size: 20px;
   font-weight: 600;
+  padding-left: 14px;
 }
 #profile .inner .base-info #name:after {
   position: relative;
@@ -786,9 +788,13 @@ code {
   top: 6px;
   margin-left: 4px;
 }
+#profile .inner .base-info #title,
+#profile .inner .base-info #title_more {
+  margin-top: 6px;
+}
 #profile .inner .base-info #location {
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 8px;
   color: #9a9ea3;
 }
 #profile .inner .base-info #location a {
