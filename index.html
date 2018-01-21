@@ -159,6 +159,286 @@
 
         <div class="outer">
             <section id="main">
+    <article id="post-iOS-ImageRoundedCornert" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/04/30/iOS-ImageRoundedCornert/">iOS 高效添加圆角效果</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+    	
+    		<i class="fa fa-calendar fa-lg"></i>
+	        <a href="/2017/04/30/iOS-ImageRoundedCornert/">
+	            <time datetime="2017-04-29T16:00:00.000Z" itemprop="datePublished">2017-04-30</time>
+	        </a>
+        
+    </div>
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder-open fa-lg"></i>
+        <a class="article-category-link" href="/categories/iOS/">iOS</a>
+    </div>
+
+                    
+    <div class="article-tag">
+       <i class="fa fa-tags fa-lg"></i>
+        <a class="tag-link" href="/tags/UIImage/">UIImage</a>
+    </div>
+
+                </div>
+            </header>
+        
+        
+            
+                
+                
+            
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>iOS 高效添加圆角效果(OC &amp; Swift)<br>andSize 参数根据图片大小设置，一般不要和图片分辨率大小一样（否则会有锯齿）<br></p>
+            <p class="article-more-link">
+                <a href="/2017/04/30/iOS-ImageRoundedCornert/#more">查看全文</a>
+            </p>
+        
+
+        </div>
+        
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://moxiaohao.com/2017/04/30/iOS-ImageRoundedCornert/" data-id="cjcp14hai000yogs23wk8h0bg" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<div class="article-share-links">',
+                            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到微博"><img src="/css/images/Weibo.png" /></a>',
+                            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ空间"><img src="/css/images/QQZone.png" /></a>',
+                            '<a href="http://v.t.qq.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ微博"><img src="/css/images/QQWeibo.png" /></a>',
+                            '<a href="#" class="article-share-icons" title="分享到微信（暂时不能分享）"><img src="/css/images/Wechat.png" /></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 21,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+	
+        <a href="http://moxiaohao.com/2017/04/30/iOS-ImageRoundedCornert/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://moxiaohao.com/2017/04/30/iOS-ImageRoundedCornert/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+
+    <article id="post-iOS-Framework" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/03/01/iOS-Framework/">iOS 静/动态 Framework (SDK) 合并</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+    	
+    		<i class="fa fa-calendar fa-lg"></i>
+	        <a href="/2017/03/01/iOS-Framework/">
+	            <time datetime="2017-02-28T16:00:00.000Z" itemprop="datePublished">2017-03-01</time>
+	        </a>
+        
+    </div>
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder-open fa-lg"></i>
+        <a class="article-category-link" href="/categories/iOS/">iOS</a>
+    </div>
+
+                    
+    <div class="article-tag">
+       <i class="fa fa-tags fa-lg"></i>
+        <a class="tag-link" href="/tags/SDK开发/">SDK开发</a>
+    </div>
+
+                </div>
+            </header>
+        
+        
+            
+                
+                
+            
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p><p>iOS 静/动态 Framework (SDK) 合并以让真机、模拟器这两种不同架构兼容<br>合并后的 Framework 同时支持 arm64 armv7 i386 x86_64 架构。<br></p>
+            <p class="article-more-link">
+                <a href="/2017/03/01/iOS-Framework/#more">查看全文</a>
+            </p>
+        
+
+        </div>
+        
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://moxiaohao.com/2017/03/01/iOS-Framework/" data-id="cjcp14had000vogs2388zd3sz" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<div class="article-share-links">',
+                            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到微博"><img src="/css/images/Weibo.png" /></a>',
+                            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ空间"><img src="/css/images/QQZone.png" /></a>',
+                            '<a href="http://v.t.qq.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ微博"><img src="/css/images/QQWeibo.png" /></a>',
+                            '<a href="#" class="article-share-icons" title="分享到微信（暂时不能分享）"><img src="/css/images/Wechat.png" /></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 21,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+	
+        <a href="http://moxiaohao.com/2017/03/01/iOS-Framework/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://moxiaohao.com/2017/03/01/iOS-Framework/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+
     <article id="post-iOS-ThemeColor" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -224,7 +504,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/11/08/iOS-ThemeColor/" data-id="cjckp1o39000vlcs2inu1m7ou" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/11/08/iOS-ThemeColor/" data-id="cjcp14hal0011ogs2byj4qdot" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -367,7 +647,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/11/04/Swift3.0-SimpleCodedClock/" data-id="cjckp1o2u000jlcs2str5a3lx" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/11/04/Swift3.0-SimpleCodedClock/" data-id="cjcp14h9s000jogs2o6p5c1ek" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -510,7 +790,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/11/01/Swift3.0-MJRefreshSimpleTest/" data-id="cjckp1o1y000dlcs26e4uppsr" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/11/01/Swift3.0-MJRefreshSimpleTest/" data-id="cjcp14h9f000dogs2xnek37np" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -653,7 +933,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/10/26/Swift3.0-PictureDrop-downEnlarge/" data-id="cjckp1o2u000nlcs2kq5aiys3" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/10/26/Swift3.0-PictureDrop-downEnlarge/" data-id="cjcp14h9o000hogs26p7lnwdh" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -796,7 +1076,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/10/24/Swift3.0-tabbarShadow/" data-id="cjckp1o2u000plcs22js1ug10" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/10/24/Swift3.0-tabbarShadow/" data-id="cjcp14ha4000pogs2rv9fed8e" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -939,7 +1219,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/10/15/Swift3.0-prefersStatusBarHidden/" data-id="cjckp1o2e000hlcs203jpd8dt" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/10/15/Swift3.0-prefersStatusBarHidden/" data-id="cjcp14h9x000nogs2e0bf21xx" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1082,7 +1362,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/10/14/Swift-GuideView/" data-id="cjckp1o1y000alcs2r3tdg9gy" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/10/14/Swift-GuideView/" data-id="cjcp14h98000aogs2soxm4ynw" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1222,7 +1502,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/10/10/Coding/" data-id="cjckp1o1i0004lcs2vgnyocnu" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/10/10/Coding/" data-id="cjcp14h8a0002ogs28pdequvv" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1300,292 +1580,6 @@
 
 
 
-    <article id="post-changes" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/09/10/changes/">Farmland changes</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-    	
-    		<i class="fa fa-calendar fa-lg"></i>
-	        <a href="/2016/09/10/changes/">
-	            <time datetime="2016-09-09T16:00:00.000Z" itemprop="datePublished">2016-09-10</time>
-	        </a>
-        
-    </div>
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder-open fa-lg"></i>
-        <a class="article-category-link" href="/categories/Diary/">日记</a>
-    </div>
-
-                    
-    <div class="article-tag">
-       <i class="fa fa-tags fa-lg"></i>
-        <a class="tag-link" href="/tags/farmland/">farmland</a>
-    </div>
-
-                </div>
-            </header>
-        
-        
-            
-                
-                
-                    
-                        <img class="article-img" src="http://og7heq3lq.bkt.clouddn.com/Farmland/%E5%B9%B4%E5%88%9D.jpg" />
-                    
-                
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>美丽小村庄的 Farmland changes，I enjoyed it immensely.<br></p>
-            <p class="article-more-link">
-                <a href="/2016/09/10/changes/#more">查看全文</a>
-            </p>
-        
-
-        </div>
-        
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://moxiaohao.com/2016/09/10/changes/" data-id="cjckp1o2u000slcs27j6ehets" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<div class="article-share-links">',
-                            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到微博"><img src="/css/images/Weibo.png" /></a>',
-                            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ空间"><img src="/css/images/QQZone.png" /></a>',
-                            '<a href="http://v.t.qq.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ微博"><img src="/css/images/QQWeibo.png" /></a>',
-                            '<a href="#" class="article-share-icons" title="分享到微信（暂时不能分享）"><img src="/css/images/Wechat.png" /></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 21,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-	
-        <a href="http://moxiaohao.com/2016/09/10/changes/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://moxiaohao.com/2016/09/10/changes/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-
-    <article id="post-life-and-memory" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/09/07/life-and-memory/">生活and记忆</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-    	
-    		<i class="fa fa-calendar fa-lg"></i>
-	        <a href="/2016/09/07/life-and-memory/">
-	            <time datetime="2016-09-06T16:00:00.000Z" itemprop="datePublished">2016-09-07</time>
-	        </a>
-        
-    </div>
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder-open fa-lg"></i>
-        <a class="article-category-link" href="/categories/Diary/">日记</a>
-    </div>
-
-                    
-    <div class="article-tag">
-       <i class="fa fa-tags fa-lg"></i>
-        <a class="tag-link" href="/tags/Life/">Life</a>
-    </div>
-
-                </div>
-            </header>
-        
-        
-            
-                
-                
-                    
-                        <img class="article-img" src="http://og7heq3lq.bkt.clouddn.com/2.jpg" />
-                    
-                
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-            <p><p>1、Everyone’s memory is a mess, Life is a mess.<br>2、Everyone’s got memories of a holiday they couldn’t have been on, or a party they never went to, or met someone for the first time.</p>
-            <p class="article-more-link">
-                <a href="/2016/09/07/life-and-memory/#more">查看全文</a>
-            </p>
-        
-
-        </div>
-        
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://moxiaohao.com/2016/09/07/life-and-memory/" data-id="cjckp1o390011lcs2x5at5qb3" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<div class="article-share-links">',
-                            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到微博"><img src="/css/images/Weibo.png" /></a>',
-                            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ空间"><img src="/css/images/QQZone.png" /></a>',
-                            '<a href="http://v.t.qq.com/share/share.php?url=' + encodedUrl + '" class="article-share-icons" target="_blank" title="分享到QQ微博"><img src="/css/images/QQWeibo.png" /></a>',
-                            '<a href="#" class="article-share-icons" title="分享到微信（暂时不能分享）"><img src="/css/images/Wechat.png" /></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 21,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-	
-        <a href="http://moxiaohao.com/2016/09/07/life-and-memory/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://moxiaohao.com/2016/09/07/life-and-memory/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-
     <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
     </nav>
@@ -1605,12 +1599,12 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                <a href="/archives">14
+                <a href="/archives">16
                     <span>文章</span>
                 </a>
             </div>
             <div class="article-info-block">
-                <a href="/tags">9
+                <a href="/tags">11
                     <span>标签</span>
                 </a>
             </div>
