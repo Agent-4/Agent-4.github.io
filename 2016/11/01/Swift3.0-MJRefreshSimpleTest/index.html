@@ -13,12 +13,12 @@
 <meta property="og:url" content="http://moxiaohao.com/2016/11/01/Swift3.0-MJRefreshSimpleTest/index.html">
 <meta property="og:site_name" content="FOUR">
 <meta property="og:description" content="当我们需要使用下拉刷新数据的时候，我们可以使用 UIRefreshControl，也可以在网上找到众多第三方的刷新库，而 MJRefresh 是一个非常优秀且非常多人使用的刷新库。">
-<meta property="og:image" content="http://og7heq3lq.bkt.clouddn.com/TheClassStructureChartofMJRefresh.png">
-<meta property="og:updated_time" content="2017-01-05T16:15:42.637Z">
+<meta property="og:image" content="http://moxiaohao.com/css/images/TheClassStructureChartofMJRefresh.png">
+<meta property="og:updated_time" content="2019-04-05T18:21:07.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift3.0 MJRefresh 的简单使用">
 <meta name="twitter:description" content="当我们需要使用下拉刷新数据的时候，我们可以使用 UIRefreshControl，也可以在网上找到众多第三方的刷新库，而 MJRefresh 是一个非常优秀且非常多人使用的刷新库。">
-<meta name="twitter:image" content="http://og7heq3lq.bkt.clouddn.com/TheClassStructureChartofMJRefresh.png">
+<meta name="twitter:image" content="http://moxiaohao.com/css/images/TheClassStructureChartofMJRefresh.png">
     
     
     
@@ -221,7 +221,7 @@
             <p>当我们需要使用下拉刷新数据的时候，我们可以使用 UIRefreshControl，也可以在网上找到众多第三方的刷新库，而 MJRefresh 是一个非常优秀且非常多人使用的刷新库。<br><a id="more"></a></p>
 <p><strong> MJRefresh </strong>是使用<strong> Objective-C </strong>写的，它有下拉刷新也有上拉刷新加载，而且它可以在控件<strong> UIScrollView、UITableView、UICollectionView、UIWebView </strong>上都可以使用。这里，来介绍一下<strong> MJRefresh </strong>在<strong> Swift3.0 </strong>上的简单使用。（<strong> Swift </strong>项目中调用<strong> Objective-C </strong>文件的具体流程这里就不介绍了！）</p>
 <p><strong> MJRefresh </strong> Github地址：<a href="https://github.com/CoderMJLee/MJRefresh" target="_blank" rel="external">https://github.com/CoderMJLee/MJRefresh</a></p>
-<p><strong> MJRefresh </strong>的类结构图：<br><img src="http://og7heq3lq.bkt.clouddn.com/TheClassStructureChartofMJRefresh.png" alt="类结构图"></p>
+<p><strong> MJRefresh </strong>的类结构图：<br><img src="/css/images/TheClassStructureChartofMJRefresh.png" alt="类结构图"></p>
 <p><strong> MJRefresh </strong>有很多自定义的内容，以下代码仅仅是简单的操作。<br><figure class="highlight objc"><figcaption><span>MJRefresh Test Code</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  TestViewController.swift</span></div><div class="line"><span class="comment">//  Mo</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  Created by moxiaohao on 2016/11/01.</span></div><div class="line"><span class="comment">//  Copyright © 2016年 moxiaohao. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line">import <span class="built_in">UIKit</span></div><div class="line"><span class="keyword">class</span> TestViewController: <span class="built_in">UIViewController</span>, <span class="built_in">UITableViewDataSource</span>, <span class="built_in">UITableViewDelegate</span> &#123;</div><div class="line">    </div><div class="line">    var tableView: <span class="built_in">UITableView</span>!</div><div class="line">    <span class="comment">//下拉刷新</span></div><div class="line">    var header = MJRefreshNormalHeader()</div><div class="line">    <span class="comment">//上拉加载</span></div><div class="line">    var footer = MJRefreshAutoNormalFooter()</div><div class="line">    </div><div class="line">    override func viewDidLoad() &#123;</div><div class="line">        <span class="keyword">super</span>.viewDidLoad()</div><div class="line">        </div><div class="line">        <span class="comment">//建一个tableView</span></div><div class="line">        tableView = <span class="built_in">UITableView</span>(frame: <span class="keyword">self</span>.view.frame, style: .plain)</div><div class="line">        tableView.delegate = <span class="keyword">self</span></div><div class="line">        tableView.dataSource = <span class="keyword">self</span>;</div><div class="line">        tableView.tableFooterView = <span class="built_in">UIView</span>()</div><div class="line">        <span class="keyword">self</span>.view.addSubview(tableView)</div><div class="line">        </div><div class="line">        <span class="comment">//设置普通下拉刷新</span></div><div class="line">        header.setRefreshingTarget(<span class="keyword">self</span>, refreshingAction: <span class="meta">#selector(headerRefresh))</span></div><div class="line">        <span class="comment">//隐藏最后一次更新时间</span></div><div class="line">        header.lastUpdatedTimeLabel.isHidden = <span class="literal">true</span></div><div class="line">        <span class="comment">//自定义各种状态下的文字</span></div><div class="line">        header.setTitle(<span class="string">"下拉刷新数据"</span>, <span class="keyword">for</span>: .idle)</div><div class="line">        header.setTitle(<span class="string">"松开刷新数据"</span>, <span class="keyword">for</span>: .pulling)</div><div class="line">        header.setTitle(<span class="string">"正在刷新数据"</span>, <span class="keyword">for</span>: .refreshing)</div><div class="line">        <span class="keyword">self</span>.tableView.mj_header = header</div><div class="line">        </div><div class="line">        <span class="comment">//设置普通上拉加载</span></div><div class="line">        footer.setRefreshingTarget(<span class="keyword">self</span>, refreshingAction: <span class="meta">#selector(footerRefresh))</span></div><div class="line">        <span class="comment">//自定义各种状态下的文字</span></div><div class="line">        footer.setTitle(<span class="string">"点击或上拉加载更多"</span>, <span class="keyword">for</span>: .idle)</div><div class="line">        footer.setTitle(<span class="string">"松开加载数据"</span>, <span class="keyword">for</span>: .pulling)</div><div class="line">        footer.setTitle(<span class="string">"正在加载数据"</span>, <span class="keyword">for</span>: .refreshing)</div><div class="line">        footer.setTitle(<span class="string">"已全部加载完！"</span>, <span class="keyword">for</span>: .noMoreData)</div><div class="line">        <span class="keyword">self</span>.tableView.mj_footer = footer</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//下拉更新操作</span></div><div class="line">    func headerRefresh() &#123;</div><div class="line">        <span class="comment">//延时1s执行，模拟更新数据（实际上什么都没有更新数据）</span></div><div class="line">        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + <span class="number">1</span>) &#123;</div><div class="line">            <span class="keyword">self</span>.tableView.reloadData()</div><div class="line">            <span class="keyword">self</span>.tableView.mj_header.endRefreshing()</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//点击或上拉加载操作</span></div><div class="line">    func footerRefresh() &#123;</div><div class="line">        <span class="comment">//延时1s执行，模拟加载数据（实际上什么都没有加载数据）</span></div><div class="line">        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + <span class="number">1</span>) &#123;</div><div class="line">            <span class="keyword">self</span>.tableView.reloadData()</div><div class="line">            <span class="keyword">self</span>.tableView.mj_footer.endRefreshing()</div><div class="line">            <span class="comment">//设置没有数据停止上拉加载</span></div><div class="line">            <span class="comment">//self.footer.endRefreshingWithNoMoreData()</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func tableView(_ tableView: <span class="built_in">UITableView</span>, numberOfRowsInSection section: Int) -&gt; Int &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">10</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    func tableView(_ tableView: <span class="built_in">UITableView</span>, cellForRowAt indexPath: IndexPath) -&gt; <span class="built_in">UITableViewCell</span> &#123;</div><div class="line">        let cellID = <span class="string">"cellID"</span></div><div class="line">        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)</div><div class="line">        cell = <span class="built_in">UITableViewCell</span>(style: .default, reuseIdentifier: cellID)</div><div class="line">        cell!.textLabel!.text = <span class="string">"cell\(indexPath.row)"</span></div><div class="line">        <span class="keyword">return</span> cell!</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    override func didReceiveMemoryWarning() &#123;</div><div class="line">        <span class="keyword">super</span>.didReceiveMemoryWarning()</div><div class="line">        <span class="comment">// Dispose of any resources that can be recreated.</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><strong> MJRefresh </strong>下拉刷新和上拉加载的简单效果图:</p>
 <p><img src="http://og7heq3lq.bkt.clouddn.com/MJRefreshTest.gif" alt="下拉刷新和上拉加载"><br><br></p>
 
@@ -236,7 +236,7 @@
 
 </div>
 
-    <a data-url="http://moxiaohao.com/2016/11/01/Swift3.0-MJRefreshSimpleTest/" data-id="cjjpwue9i000hlos2ljs6okha" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
+    <a data-url="http://moxiaohao.com/2016/11/01/Swift3.0-MJRefreshSimpleTest/" data-id="cju4eow2q000h3ss2gr1sfxrq" class="article-share-link"><i class="fa fa-share-alt fa-lg"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -492,7 +492,7 @@
     <script src="/js/modalEffects.js"></script>
     <br>
     <div class="widget-music">
-        <img src="http://og7heq3lq.bkt.clouddn.com/musicline.jpg" width="100%" height="40px" />
+        <img src="/css/images/musicline.jpg" width="100%" height="40px" />
         <h3 class="music-title">
             <img class="img_music" src="/css/images/music.png" /> 听一下音乐：<span> （FROM 网易云音乐）</span>
         </h3>
@@ -598,23 +598,23 @@
                 
         </div>
     </div> -->
-
+<!--
     <a href="https://coding.net/pages" target="_blank" >
         <div class="CodingPages">
          <img class="img_coding" src="/css/images/CodingPages.png" />
         </div>
-    </a>
+    </a> -->
     
     <div class="widget-wrap widget-list">
         <div class="container4">
             <section id="progressbar-slider" class="sample slider-animated" data-slidizle data-slidizle-loop="true" data-slidizle-timeout="4000" data-slidizle-pause-on-hover="true">
                 <ul class="slider-content" data-slidizle-content>
-                    <li><img src="http://og7heq3lq.bkt.clouddn.com/sonic.jpg" width="100%" height="100px" /></a></li>
-                    <li><img src="http://og7heq3lq.bkt.clouddn.com/weepingangel.jpg" width="100%" height="100px" /></li>
-                    <li><img src="http://og7heq3lq.bkt.clouddn.com/clara.jpg" width="100%" height="100px" /></li>
-                    <li><img src="http://og7heq3lq.bkt.clouddn.com/dw4.jpg" width="100%" height="100px" /></li>
-                    <li><img src="http://og7heq3lq.bkt.clouddn.com/little-amy.jpg" width="100%" height="100px" /></li>
-                    <li><img src="http://og7heq3lq.bkt.clouddn.com/ool.jpg" width="100%" height="100px" /></li>
+                    <li><img src="/css/images/sonic.jpg" width="100%" height="100px" /></a></li>
+                    <li><img src="/css/images/weepingangel.jpg" width="100%" height="100px" /></li>
+                    <li><img src="/css/images/clara.jpg" width="100%" height="100px" /></li>
+                    <li><img src="/css/images/dw4.jpg" width="100%" height="100px" /></li>
+                    <li><img src="/css/images/little-amy.jpg" width="100%" height="100px" /></li>
+                    <li><img src="/css/images/ool.jpg" width="100%" height="100px" /></li>
                 </ul>
                 <div class="slider-progressbar"></div>
                 <ul class="slider-navigation" data-slidizle-navigation></ul>
@@ -683,11 +683,11 @@
 </script>
             
         </div>
-        <script asyns src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <script asyns src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-           &copy; 2018 FOUR4<br>
+           &copy; 2019 FOUR4<br>
             Design by <a href="https://coding.net/u/four4" target="_blank">FOUR4</a> | <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> Views</span><br>
             <span class="Tips"><i class="fa fa-heart" aria-hidden="true"></i> We're all stories in th end.  Just make it a good one, eh ?</span>
         </div>
