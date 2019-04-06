@@ -665,7 +665,6 @@ perspective effects (not including the modals and the overlay).
 }
 
 button {
-  width: 100%;
   border: none;
   color: #333;
   background:#f5f8f9;
